@@ -77,6 +77,6 @@ class Statistics(models.Model):
 
 class DailyZScore(models.Model):
     class Meta:
-        db_tabll = 'DailyZScore'
+        db_table = 'DailyZScore'
     symbol = models.CharField(max_length=10, primary_key=True)
     z_score = models.FloatField(default=None, blank=True, null=True)
