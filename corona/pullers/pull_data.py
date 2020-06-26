@@ -18,13 +18,13 @@ class PullTickerData:
         tickers = Tickers.objects.raw("select symbol from Tickers")
 
         for ticker in tickers:
-            last_date = ClosingPoints.objects.raw('select max(date) AS recent,max(id) AS id from ClosingPoints where symbol = "%s"' % (ticker))
-            if last_date and last_date[0].recent is not None:
-                last_date = datetime.datetime.strptime(last_date[0].recent, "%Y-%m-%d")
-                if last_date.date() < self.default_end.date():
-                    data_to_fetch.append((ticker.symbol,last_date + datetime.timedelta(days=1)))
-            else:
-                data_to_fetch.append((ticker.symbol, PullTickerData.default_start))
+            # last_date = ClosingPoints.objects.raw('select max(date) AS recent,max(id) AS id from ClosingPoints where symbol = "%s"' % (ticker))
+            # if last_date and last_date[0].recent is not None:
+            #     last_date = datetime.datetime.strptime(last_date[0].recent, "%Y-%m-%d")
+            #     if last_date.date() < self.default_end.date():
+            #         data_to_fetch.append((ticker.symbol,last_date + datetime.timedelta(days=1)))
+            # else:
+            data_to_fetch.append((ticker.symbol, PullTickerData.default_start))
 
         self.update_data_in_db(data_to_fetch)
 

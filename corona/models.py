@@ -74,3 +74,9 @@ class Statistics(models.Model):
     std_2019 = models.FloatField(default=None, blank=True, null=True)
     mean_2020 = models.FloatField(default=None, blank=True, null=True)
     std_2020 = models.FloatField(default=None, blank=True, null=True)
+
+class DailyZScore(models.Model):
+    class Meta:
+        db_tabll = 'DailyZScore'
+    symbol = models.CharField(max_length=10, primary_key=True)
+    z_score = models.FloatField(default=None, blank=True, null=True)

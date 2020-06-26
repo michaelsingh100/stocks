@@ -8,3 +8,10 @@ class MeanPuller:
         enhan = (Statistics(symbol=result.symbol,mean_2020=result.mean,std_2020=result.stan) for result in results)
 
         Statistics.objects.bulk_create(enhan, ignore_conflicts=True)
+
+    def updateZ(self,limit):
+        results = ClosingPoints.objects.raw("select id,symbol,((nt.price - Statistics.mean_2020)/Statistics.std_2020) as z_score from (select id, symbol, price from (select max(date) as id ,symbol from ClosingPoints group by symbol) as " \
+                                            "dates left join ClosingPoints on dates.symbol = ClosingPoints.symbol and dates.id = ClosingPoints.date) as nt," \
+                                            "Statistics where nt.symbol = Statistics.symbol order by z_score ASC LIMIT %s" % (limit))
+
+        r
