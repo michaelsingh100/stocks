@@ -1,0 +1,1417 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="description" content=
+		"Get performance stock data for AA Alcoa Corp including total and trailing returns."
+		/>
+	<title>AA Alcoa Corp Stock Performance of Total and Trailing Returns</title>
+	<link href="//performance.morningstar.com/perform/static/performance/stock/quote2.css" rel="stylesheet" type="text/css">
+	<link href="//performance.morningstar.com/perform/static/common/css/reports.css" rel="stylesheet" type="text/css">
+	<link href="//performance.morningstar.com/perform/static/common/css/reports_nav_styles.css" rel="stylesheet" type="text/css" /> 
+    <!--[if IE 6]><link type="text/css" rel="stylesheet" media="print" href="//performance.morningstar.com/perform/static/common/css/fix_IE6_print_style.css"><![endif]-->
+		<link href="//performance.morningstar.com/perform/static/common/css/reports_nav_styles_ads.css" rel="stylesheet" type="text/css" /> 
+	<!--[if lte IE 7]>
+	<style type="text/css">
+	    .col_lbl {
+	        width:197px;
+	    }
+	    .col_data1 {
+	        width:64px;
+	    }
+	    .col_data2 {
+	        width:65px;
+	    }
+	    .col_data3 {
+	        width:63px;
+	    }
+	    .col_lbl2 {
+	        width:200px;
+	    }
+	    .col_data4 {
+	        width:77px;
+	    }
+	    .col_data5 {
+	        width:78px;
+	    }
+	    .col_data6 {
+	        width:79px;
+	    }
+	    .col_data9 {
+	    	width:69px;
+	    }
+	    .col_data10 {
+	    	width:70px;
+	    }
+	    .col_data11 {
+	    	width:68px;
+	    }
+	    a.large_button{ width:75px; }
+	</style>
+	<![endif]-->
+	
+		<!--[if IE]>
+	<style type="text/css">
+	    .auto-complete {	    
+	        width:389px;
+	        opacity:.93;
+	        filter:alpha(opacity:93);
+	        -moz-opacity:.93;
+	        -khtml-opacity:.93;
+	        background-color:white;
+	        left:0;
+	        top:0;
+	        z-index:1050;
+	    }
+	</style>
+	<![endif]--> 
+	
+	<style type="text/css"> 
+	    .auto-complete {	    
+	        opacity:.93;
+	        filter:alpha(opacity:93);
+	        -moz-opacity:.93;
+	        -khtml-opacity:.93;
+	        background-color:white;
+	        left:0;
+	        top:0;
+	        z-index:1050;
+	    }
+	    
+	</style> 
+	
+	<style type="text/css">
+		.ext-perf { font-style: italic; }
+		.dd_multi ul li a {font-size:11px; line-height:15px;}
+		
+		.width955px{width: 955px;}/*lily*/
+		.width196px{width: 196px;}/*lily*/
+		
+		.dd_multi ul li {
+		height:auto;
+		}
+	</style>
+	
+	<script language="javascript" type="text/javascript" src="//performance.morningstar.com/perform/static/common/js/common_pack_0.0.12.js"></script>
+	<script language="javascript" type="text/javascript" src="//performance.morningstar.com/perform/static/performance/stock/auto.js"></script>
+	<script language="javascript" type="text/javascript" src="//performance.morningstar.com/perform/static/performance/stock/auto-complete.js"></script>
+	<!--[if IE]><script language="javascript" type="text/javascript" src="//performance.morningstar.com/perform/static/performance/stock/excanvas.min.js"></script><![endif]-->
+	<script language="javascript" type="text/javascript" src="//performance.morningstar.com/perform/static/performance/stock/jquery-1.3.2.js"></script>
+	<script language="javascript" type="text/javascript" src="//performance.morningstar.com/perform/static/performance/stock/jquery.flot.js"></script>
+	<script language="javascript" type="text/javascript" src="//performance.morningstar.com/perform/static/performance/stock/json2.js"></script>
+	<script language="javascript" type="text/javascript" src="//performance.morningstar.com/perform/static/performance/stock/icon2.js"></script>
+	<script language="javascript" type="text/javascript" src="//performance.morningstar.com/perform/static/performance/stock/ctrl_st.js"></script>
+	<script language="javascript" type="text/javascript" src="//performance.morningstar.com/perform/static/performance/stock/compare.js"></script>
+	<script type="text/javascript" src="//performance.morningstar.com/perform/static/common/js/chartapi1.js"></script>
+	<script language="javascript" type="text/javascript" src="//performance.morningstar.com/perform/static/common/js/linegraph.js"></script>
+	<!--script src="//performance.morningstar.com/perform/static/common/js/tracking_user_bcgmn_c.js" language=javascript></script-->
+	
+
+	<script language="javascript">
+		var g_symbol = "XNYS:AA";
+		var g_region = "usa";
+		var g_ops = "";
+		var g_currency = "USD";
+		if (g_currency.substr(0, 2) == ", ") {
+                        g_currency = g_currency.substr(2);
+        }
+		var g_shareclassid = "0P00018WO0";
+		var g_culture = "en-US";
+		var g_productCode = "COM";
+		var g_addSP500 = "yes";
+		var g_ep = true;
+		var initialComparisonSymbols = null;
+		var inputPage = "#total_returns_page";
+		var tabs = null;
+		var g_version="";
+		var g_benchmarkSecId=""; 
+		var g_benchmarktype="";
+		var g_year=5;  
+		var serverName = '//performance.morningstar.com/perform';
+		var urlAppendix = '&t=XNYS:AA&region=usa&culture=en-US&cur=';
+		function loadData(page,isRemove) {			
+		 	loadStockData(page,'en-US',isRemove,'//performance.morningstar.com/perform');
+		 	
+		}	
+	</script>
+	
+	<script language="javascript" type="text/javascript" src="//performance.morningstar.com/perform/static/performance/stock/performance.js"></script>
+	<script language="javascript" type="text/javascript" src="//performance.morningstar.com/perform/static/performance/stock/canvas.js"></script>
+<link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+<script type="text/javascript">window.onerror=function(msg){$("body").attr("JSError",msg);}</script>
+</head>
+<body>	
+<link type="text/css" rel="stylesheet" href="//performance.morningstar.com/perform/static/common/css/m-global_v1.9.css">
+<!--link type="text/css" rel="stylesheet" href="//performance.morningstar.com/perform/static/common/css/m-global_v_us.css"-->
+
+
+<script language="javascript" type="text/javascript">
+		var extPos ="";
+		var midPos1 ="";
+		var midPos2 ="";
+		var extQue="";
+          midPos1 = ",rectangletopright";
+          midPos2 = ",chrtxt65top";
+ 
+var aim = {
+	"sitename":"ms.us",
+	"area":"reports.stocks",
+	"listpos":"leaderboard"+midPos1+",reportsSponsorLink,button120x60topright,chrtxt30top,button195x90,footer,tickertapebutton"+midPos2+extPos,
+	"url":"msmedia.morningstar.com/mstar/bserver",
+	"adquery":"/ticker=AA/country=USA/secCode=101/pgid=performance"+extQue
+	};
+	
+   var jsPath = '//im.morningstar.com/adtag/msusadconfig.js?v='+Math.floor(Math.random()*1000000) ;
+    document.write('<script  type="text/javascript" src="'+jsPath+'"><\/script>'); 
+</script>
+
+
+<div class="headerwrap">
+    <!--[If !IE]> start logo <![endif]-->
+    <div class="h_Logo">
+        <div class="h_Logo_row1">
+        	<a href="//www.morningstar.com" class="logo" title="Morningstar Logo"></a>
+           		<div class="greeter">Welcome!</div>
+                        
+            <div class="h_Logo_col1">
+	            <input id="AutoCompleteBox" name="sSrchTerm" value="" class="h_quote" autocomplete="off" maxlength="256" type="text" ></input>
+                <a class="hqt_button" onclick="HeaderBox.trySubmit()" href="javascript:void(0)"></a>                     
+          		<form name="searchForm" method="post" onsubmit="srchTerm('search')" style="margin: 0px; padding: 0px;">                        
+                <input name="sSrchTerm" value="" class="h_search" onclick="ClearSearchBox('search')" type="text"></input>
+                <input name="SrchTerm" type="hidden">
+                <a href="javascript:srchTerm('search')" class="hsr_button"></a>
+            </form>
+            <div class="h_textad">
+            		<div id="OAS_Top1">
+            		<script type="text/javascript">
+					      OAS_AD('chrtxt30top');
+					</script>
+            		</div>
+            </div>
+            </div>
+            <div class="h_Logo_col2">
+                <a href="//corporate.morningstar.com/US/asp/subject.aspx?filter=refresh&xmlfile=126.xml&pgid=hetopcompnews" class="h_text1">Company News</a>
+                <a href="//corporate.morningstar.com/US/asp/home.aspx?xmlfile=202.xml&pgid=hetopcompsite" class="h_text1">Company Site</a>
+                <a href="http://members.morningstar.com/marketing/Article/ArticleLanding2.htm" class="h_text1">Premium</a>
+                <a href="https://members.morningstar.com/memberservice/login.aspx" class="h_text1">Log In</a><br />
+            </div>
+        </div>
+  	</div>  <!--[If !IE]> end logo <![endif]-->
+    
+    <!--[If !IE]> start leaderboard ads <![endif]-->
+
+    <div class="h_Ads">
+        <div class="h_Ads_row1">
+            <div class="h_leaderad">
+                <div id="OAS_TopLeft">
+                 <script type="text/javascript">
+				      OAS_AD('leaderboard');
+				</script>
+                </div>
+            </div>
+            
+          	<div class="h_houseadX43">
+                <div id="OAS_x30">
+                  <script type="text/javascript">
+				      OAS_AD('button195x90');
+				  </script>
+                </div>                
+          	</div>
+      </div>
+    </div>  
+    <!--[If !IE]> end leaderboard ads <![endif]-->
+    
+    <!--[If !IE]> start main navigation <![endif]-->
+    <div class="h_MainNav">
+        <div class="h_MainNav_row1">
+            <a id="MH_tab1" href="//members.morningstar.com/memberstpages/membership.htm" title='Membership Center' class="h_tabL">Membership</a> 	
+            <a id="MH_tab2" href="//www.morningstar.com" class="h_tab1" title="Investment">Home</a>
+            <a id="MH_tab3" href="//portfolio.morningstar.com/RtPort/Reg/AllView.aspx" class="h_tab1" title="Portfolio">Portfolio</a> 
+            <a id="MH_tab4" href="//www.morningstar.com/Cover/Stocks.html" class="h_tab1" title="Stocks">Stocks</a> 
+            <a id="MH_tab5" href="//www.morningstar.com/Cover/bonds.aspx" class="h_tab2" title="Bonds">Bonds</a> 
+            <a id="MH_tab6" href="//www.morningstar.com/Cover/Funds.aspx" class="h_tab1" title="Funds">Funds</a> 
+            <a id="MH_tab7" href="//www.morningstar.com/Cover/ETFs.aspx" class="h_tab1" title="ETFs">ETFs</a>             
+			<a id="MH_tab8" href="//www.morningstar.com/Cover/CEF-Closed-End-Funds.aspx" class="h_tab1" title="CEF">CEF</a> 
+            <a id="MH_tab9" href="//www.morningstar.com/Cover/Markets.html" class="h_tab1" title="Markets">Markets</a> 
+            <a id="MH_tab10" href="//www.morningstar.com/Cover/Tools.html" class="h_tab1" title="Tools">Tools</a> 
+            <a id="MH_tab11" href="//www.morningstar.com/Cover/PersonalFinance.html" class="h_tab3" title="Personal Finance">Real Life Finance</a>
+            <a id="MH_tab12" href="//socialize.morningstar.com/newsocialize/asp/coverpage.asp" class="h_tab1" title="Discuss">Discuss</a>
+          	<div class="h_tabbase"></div>
+        </div>
+                <!--[if !IE]> start sub navigation <![endif]-->
+        <div id="subnav" class="h_SubNav" style="display:none;">
+            <li class="h_subnav1">
+                <a href="#" class="h_subtab">Investing Ideas</a>
+                <ul class="h_subnav2">
+                	<li><div class="subnavrule"></div></li>
+                    <li><a href="//news.morningstar.com/fundanalystpicks/catlist/Default.html">Fund Analyst Picks</a></li>
+                    <li><a href="//news.morningstar.com/FundAnalystPicks/CategoryList/0,3440,,00.html">Picks by Category</a></li>
+                    <li><a href="//www.morningstar.com/goto/fundpickperform">Fund Pick Performance</a></li>
+                    <li><a href="//members.morningstar.com/prism/sub_cent_Newsletters.html#Newsanchor">Picks &amp; Pans E-Newsletter</a></li>
+                    <li><a href="//news.morningstar.com/archive/archive.asp?inputs=days=365;colId=2;sortField=publishDate;sortDirection=desc">Fund Spy Column</a></li>
+                    <li><a href="//mfi.morningstar.com/FundSpy/SpyPurchase.aspx">Fund Spy Book</a></li>
+                    <li><a href="//news.morningstar.com/archive/archive.asp?inputs=days=365;colId=16;sortField=publishDate;sortDirection=desc">Bond Squad</a></li>
+                    <li><a href="javascript:void(0)" onclick="window.open('//www.morningstar.com/cover/videocenter.html?lineup=funds','','width=860,height=705')">Fund Video Reports</a></li>
+                    <li><a href="//www.morningstar.com/Products/Store_FundInvestor.html">FundInvestor Newsletter</a></li>
+                    <li><a href="//www.morningstar.com/goto/mei_expert">ETF Investing</a></li>
+                    <li><a href="//www.morningstar.com/goto/FFR_Experts">Fund Family Experts</a></li>
+                </ul>
+            </li>
+        
+            <li class="h_subnav1">
+                <a href="#" class="h_subtab">Fund Reports</a>
+                <ul class="h_subnav2">
+                	<li><div class="subnavrule"></div></li>
+                    <li><a href="//www.morningstar.com/allanalyses/analysesLists.html?type=FO">All Fund Analyst Reports</a></li>
+                    <li><a href="//www.morningstar.com/FidGrades/AllFidGrades.html?sortColumn=1&curField=1">Fund Stewardship Reports</a></li>
+                </ul>
+            </li>
+        
+            <li class="h_subnav1">
+                <a href="#" class="h_subtab">Fund Ratings</a>
+                <ul class="h_subnav2">
+                	<li><div class="subnavrule"></div></li>
+                    <li><a href="//screen.morningstar.com/Compare/Fund/FundCompareResults.html?currview=default&CriteriaList=PresetFund:Large+Value~PresetFund:Mid-Cap+Value~PresetFund:Small+Value~">Highest-Rated Value</a></li>
+                    <li><a href="//screen.morningstar.com/Compare/Fund/FundCompareResults.html?currview=default&CriteriaList=PresetFund:Large+Growth~PresetFund:Mid-Cap+Growth~PresetFund:Small+Growth~">Highest-Rated Growth</a></li>
+                    <li><a href="//screen.morningstar.com/Compare/Fund/FundCompareResults.html?currview=default&CriteriaList=~PresetFund:Large+Growth~PresetFund:Large+Blend~PresetFund:Large+Value~">Highest-Rated Large-Cap</a></li>
+                    <li><a href="//screen.morningstar.com/Compare/Fund/FundCompareResults.html?currview=default&CriteriaList=PresetFund:Mid-Cap+Growth~PresetFund:Mid-Cap+Blend~PresetFund:Mid-Cap+Value~">Highest-Rated Mid-Cap</a></li>
+                    <li><a href="//screen.morningstar.com/Compare/Fund/FundCompareResults.html?currview=default&CriteriaList=PresetFund:Small+Growth~PresetFund:Small+Blend~PresetFund:Small+Value~">Highest-Rated Small-Cap</a></li>
+                    <li><a href="//screen.morningstar.com/FundResults.html?preset=ForeignStock">Foreign Fund Standouts</a></li>
+                    <li><a href="//www.morningstar.com/goto/starrateperform">Star Rating Performance</a></li>
+                    <li><a href="//corporate.morningstar.com/US/documents/MethodologyDocuments/FactSheets/MorningstarRatingForFunds_FactSheet.pdf">Rating Methodology</a></li>
+                </ul>
+            </li>
+        
+            <li class="h_subnav1">
+                <a href="#" class="h_subtab">Fund Performance</a>
+                <ul class="h_subnav2">
+                	<li><div class="subnavrule"></div></li>
+                    <li><a href="//screen.morningstar.com/FundSearch/FundRank.html?fundCategory=all&screen=tr1m">Top 1-Month Performers</a></li>
+                    <li><a href="//screen.morningstar.com/FundSearch/FundRank.html?fundCategory=all&screen=trytd">Top YTD Performers</a></li>
+                    <li><a href="//screen.morningstar.com/FundSearch/FundRank.html?fundCategory=all&screen=tr1yr">Top 1-Year Performers</a></li>
+                    <li><a href="//screen.morningstar.com/FundSearch/FundRank.html?fundCategory=all&screen=tr3yr">Top 3-Year Performers</a></li>
+                    <li><a href="//screen.morningstar.com/FundSearch/FundRank.html?fundCategory=all&screen=tr5yr">Top 5-Year Performers</a></li>
+                    <li><a href="//news.morningstar.com/fundReturns/CategoryReturns.html">Fund Category Returns</a></li>
+                    <li><a href="//screen.morningstar.com/Movers/FdMovDef.html">Biggest Daily NAV Changes</a></li>
+                    <li><a href="//news.morningstar.com/CELists/CEReturns.html">Closed-End Funds</a></li>
+                    <li><a href="//news.morningstar.com/etf/Lists/ETFReturns.html">Exchange-Traded Funds</a></li>
+                    <li><a href="//www.morningstar.com/goto/QEML">Quarterly Market Outlook</a></li>
+                </ul>
+            </li>
+        
+            <li class="h_subnav1">
+                <a href="#" class="h_subtab">Fund Screeners</a>
+                <ul class="h_subnav2">
+                	<li><div class="subnavrule"></div></li>
+                    <li><span>Basic Screeners</span></li>
+                    <li><a href="//screen.morningstar.com/FundSelector.html">Fund Screener</a></li>
+                    <li><a href="//screen.morningstar.com/FundResults.html?preset=LongTerm">Long-Term Winners</a></li>
+                    <li><a href="//screen.morningstar.com/FundResults.html?preset=SmallGrowth">Solid Small-Growth Funds</a></li>
+                    <li><a href="//screen.morningstar.com/FundResults.html?preset=ConservativeBond">Conservative Bond Funds</a></li>
+                    <li><div class="subnavrule"></div></li>
+                    <li><span>Premium Screeners</span></li>
+                    <li><a href="//screen.morningstar.com/AdvFunds/Selector.html">Premium Fund Screener</a></li>
+                    <li><a href="//screen.morningstar.com/advfunds/results.html?preset=Index+Funds">Index Funds</a></li>
+                    <li><a href="//screen.morningstar.com/AdvFunds/Results.html?preset=Hidden%20Gems">Hidden Gems</a></li>
+                    <li><a href="//screen.morningstar.com/AdvFunds/Results.html?preset=Conservative%20Foreign%20Funds">Lower-Risk Foreign Funds</a></li>
+                </ul>
+            </li>
+            
+            <li class="h_subnav1"><a href="javascript:void(0)" onclick="window.open('//www.morningstar.com/cover/videocenter.html?lineup=funds','','width=860,height=705')" class="h_subtab1">Video Center</a></li>
+                
+        </div>  <!--[if !IE]> end sub navigation <![endif]-->
+
+    </div>  <!--[If !IE]> end main navigation <![endif]-->
+    
+        <div id="TickerWrapper"></div>
+    
+			
+</div>  <!--[If !IE]> end header wrap <![endif]-->  
+
+<div id="AutoCompleteDropDown" name="AutoCompleteDropDown"></div>
+<script type="text/javascript" src="//performance.morningstar.com/perform/static/common/js/common_pack_0.0.12.js"></script>
+
+	<div class="wrapper">	
+		<!--[If !IE]> end header wrap <![endif]-->
+		<div class="r_bodywrap">
+			<!--if productCode?? && (productCode?upper_case=="DIRECT" || productCode?upper_case == "AWSOE")>
+				<ul class="printlist">
+			        <li>
+			            <a class="print_page" style="cursor: pointer;" onclick="document.execCommand('print');">Print This Page</a>
+			        </li>
+			    </ul>
+			<if-->		
+			<!-- Page Title -->
+			<!-- Graph & Definition -->
+			<div class="reports_nav">
+			
+				<div class="r_fund_sponsor" id="OAS_x05"><script language="javascript" type="text/javascript">OAS_AD('reportsSponsorLink');</script></div> 
+                
+                <div class="r_btn_ad" id="OAS_Top2"><script language="javascript" type="text/javascript">OAS_AD('button120x60topright');</script></div>					
+			
+				<!-- begin reports header -->
+				<!--<div class="r_title">
+					<h1>Alcoa Corp</h1>
+					<span class="gry">&nbsp;AA</span> <span class="starnr" id="star_span">
+					</span>
+				</div>
+				<div class="r_cnav">
+					<a href="//portfolio.morningstar.com/NewPort/Reg/AddToPortfolio.aspx?ticker=AA&amp;region=usa&amp;name=Alcoa%20Corp">
+						Add to Portfolio</a> <span class="alert"></span><a href="//portfolio.morningstar.com/PortAsp/EditAlerts.asp?PType=T&amp;Action=E&amp;Symbol=AA&amp;region=usa&amp;culture=en-US#StockFundAlerts">
+							Get E-mail Alerts</a> <span class="print"></span>&nbsp;Print:<a href="javascript:openWin('performance-return.action?t=AA&amp;region=usa&amp;culture=en-US&amp;ops=p&p='+getCurrentPageId()+'&amp;tabs='+getActiveTabs()+'&amp;s='+getComparisonSymbols(','),'Print','toolbar=yes,menubar=yes,scrollbars=yes,resizable=yes')"
+								style="margin-right: 5px;">This Page</a>|<a href="javascript:openWin('//quicktake.morningstar.com/fundnet/printreport.aspx?symbol=AA&amp;Country=USA','Print','toolbar=yes,menubar=yes,scrollbars=yes,resizable=yes')">Full
+									Report</a> <span class="pdf"></span><a class="gr_text10L" href="javascript:openWin('//members.morningstar.com/prism/AccessPDFNew/AccessPDF.html?SourceCode=PR8013&amp;region=usa&amp;PDFName=AA')">
+										PDF Report</a> <span class="help"></span><a href="javascript:openWin('//socialize.morningstar.com/feedback/feedbackform.asp')">
+											Data Question</a>
+				</div>-->
+				
+				<link href="//quotes.morningstar.com/navig/static/common/css/reports_nav_styles.css" rel="stylesheet" type="text/css" /><div class='r_title'>
+	<h1>Alcoa Corp</h1>
+	<span class='gry'>&nbsp;AA</span>
+	<span style="border-left: 2px solid #bbb;font-size: 17px; cursor:hand;">
+		<a class="r_premium_icon" style="padding-left: 26px; font-size: 14px; color: #000; text-decoration: none; background-position: 8px -270px; cursor:pointer;" 
+			onclick="javascript:redirect('https://members.morningstar.com/Register/premium-analysis/defaultformtestimonial-PHX?referid=A3766&HID=QUO_STK126');">
+			Morningstar Rating
+		</a>
+	</span>
+	<span class=''></span>
+</div>
+<script language="javascript">
+	function redirect(url){
+		window.location.href = url + "&vurl=" + encodeURIComponent(window.location.href);
+	}
+</script><ul class='r_cnav_ads' ><li><a href='http://portfolio.morningstar.com/RtPort/reg/addtoportfolio.aspx?ticker=AA' class='r_portf'>Add to Portfolio</a></li><li><a href='http://portfolio.morningstar.com/RtPort/Reg/EditAlerts.aspx#StockFundAlerts?symbol=AA&region=usa' class='r_alert'>Get E-mail Alerts</a></li><li><a href='javascript:openWin("http://performance.morningstar.com/stock/performance-return.action?ops=p&p=total_returns_page&t=AA&region=usa&culture=en-US","Morningstar","width=750,height=600,top=30,left=30,toolbar=yes,menubar=yes,scrollbars=yes,resizable=yes")' class='r_print_page'>Print This Page</a></li><li><a href='javascript:openWin("http://members.morningstar.com/prism/AccessPDFNew/AccessPDF.html?SourceCode=PR8018&PDFName=AA","Morningstar","width=500,height=255,top=30,left=30,toolbar=yes,menubar=yes,scrollbars=yes,resizable=yes")' class='r_pdf'>PDF Report</a></li><li><a href='javascript:openWin("http://socialize.morningstar.com/feedback/feedbackform.asp","Morningstar","width=750,height=600,top=30,left=30,toolbar=yes,menubar=yes,scrollbars=yes,resizable=yes")' class='r_help'>Data Question</a></li></ul><ul class='r_nav' ><li><a href='http://www.morningstar.com/stocks/XNYS/AA/quote.html'>Quote</a></li><li><a href='http://quotes.morningstar.com/chart/stock/chart.action?t=AA&region=usa&culture=en-US'>Chart</a></li><li><span class='premium'><a href='http://analysisreport.morningstar.com/stock/research?t=AA&region=usa&culture=en-US' class='r_premium_icon'>Stock Analysis</a></span></li><li><a href='http://performance.morningstar.com/stock/performance-return.action?t=AA&region=usa&culture=en-US' class='tabon'>Performance</a></li><li><a href='http://financials.morningstar.com/ratios/r.html?t=AA&region=usa&culture=en-US'>Key Ratios</a></li><li><a href='http://financials.morningstar.com/income-statement/is.html?t=AA&region=usa&culture=en-US'>Financials</a></li><li><a href='http://financials.morningstar.com/valuation/price-ratio.html?t=AA&region=usa&culture=en-US'>Valuation</a></li><li><a href='http://insiders.morningstar.com/trading/executive-compensation.action?t=AA&region=usa&culture=en-US'>Insiders</a></li><li><a href='http://investors.morningstar.com/ownership/shareholders-overview.html?t=AA&region=usa&culture=en-US'>Ownership</a></li><li><a href='http://quicktake.morningstar.com/StockNet/SECDocuments.aspx?Symbol=AA&Country=usa'>Filings</a></li><li><a href='http://quicktake.morningstar.com/StockNet/bonds.aspx?Symbol=AA&Country=usa'>Bonds</a></li></ul><ul class='r_snav' ><li><a href='http://performance.morningstar.com/stock/performance-return.action?t=AA&region=usa&culture=en-US' class='on'><h2>Total Returns</h2></a></li><li><a href='http://performance.morningstar.com/stock/performance-return.action?p=price_history_page&t=AA&region=usa&culture=en-US'><h2>Price History</h2></a></li><li><a href='http://performance.morningstar.com/stock/performance-return.action?p=dividend_split_page&t=AA&region=usa&culture=en-US'><h2>Dividends & Splits</h2></a></li></ul>				
+				
+			</div>
+			<!-- end reports header -->
+			<div class="col5">
+				<div id="total_returns_page" >
+
+					<div id="div_quote_data_strip"></div>
+					<div class="col5" style="position:relative;">
+					<div id="colp" class="col3 colp" style="left:0px;top:0px;overflow:hidden">
+					<div class="hspacer0"></div> 
+					<div class="cc_container print965" id="perf" style="width:100%;">
+                        <div class="r_time_contain" style="width:220px; float:left; cursor:pointer;">
+                            <a class="large_button width_108 on" id="collapse">Collapsed View</a>
+                            <a class="large_button width_108" id="expand">Expanded View</a>
+                        </div>
+		                <ul class="tabs r_time_contain">
+		                    <li>
+                            	<a id="left" href="#compare_perf" onclick="return false;">Compare</a>
+                            </li>	            
+						</ul>
+					</div>
+		      		<div style="display:none; border-right:1px solid #999; width:563px; height:auto;" class="cc_panel closecontent" id="compare_perf" >
+						<div class="contain">
+							<div class="text" style="width:50%; *height:13px;">
+								<h4>Enter Tickers</h4>
+							</div>
+							<div style="postition:relative;">
+								<div class="brange">
+									<div class="add">
+										<a href="javascript:void(0);" onclick="CompareHeaderBox.trySubmit();">Add</a>
+									</div>
+									<input type="text" id="CompareAutoCompleteBox" name="sSrchTerm" value="" class="h_quote"
+										autocomplete="off" maxlength="256" />
+								</div>
+							</div>
+						</div>
+						<div id="CompareAutoCompleteDropDown" name="AutoCompleteDropDown" class="auto-complete" style="position:absolute;left:9px;top:82px;*top:80px; display:none;"></div>
+
+				        <div class="contain">
+				            <div class="dmenu dd_multi" id="benchmark-dd">
+				                <a href="#" class="dd2h top_dd">Add Benchmark</a>
+				                <ul style="z-index:100; position:absolute; top:68px; left:245px; *top:79px; *left:205px; _top:81px;">
+	<li id="LMorningstar Indices" menuitemstyle="subMenu">
+		<a href="javascript:void(0)"
+			class="ms-menu-arrow">Morningstar Indices</a>
+		<ul style="display: none;" class="ms-menu-second"
+				id="Morningstar Indices">
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol="$MSTART" exch="IXUS"
+			fid="FSUSA00KGP" sid="XIUSA0010V" pid="0P00001GJX" name="U.S. Market TR">U.S. Market TR</a>
+			</li>
+			<li id="LValue" menuitemstyle="subMenu">
+				<a href="javascript:void(0)" class="ms-menu-arrow">
+					Value
+				</a>
+				<ul class="ms-menu-second" id="Value">
+					<li>
+						<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol="$MVALT" exch="IXUS"
+					fid="FSUSA00KH4" sid="XIUSA0011A" pid="0P00001GKC" name="U.S. Value TR">
+							U.S. Value TR
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol="$MSVLT"
+									exch="IXUS" fid="FSUSA00KH1" sid="XIUSA00116" pid="0P00001GK8" name="Small Value TR">
+							Small Value TR
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol="$MMVLT"
+										exch="IXUS" fid="FSUSA00KH0" sid="XIUSA00117" pid="0P00001GK9" name="Mid Value TR">
+							Mid Value TR
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol="$MLVLT"
+											exch="IXUS" fid="FSUSA00KGZ" sid="XIUSA00115" pid="0P00001GK7" name="Large Value TR">
+							Large Value TR
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li id="LCore" menuitemstyle="subMenu">
+				<a href="javascript:void(0)" class="ms-menu-arrow">
+					Core
+				</a>
+				<ul class="ms-menu-second" id="Core">
+					<li>
+						<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol="$MCORT" exch="IXUS"
+					fid="FSUSA00KH3" sid="XIUSA00119" pid="0P00001GKB" name="U.S. Core TR">
+							U.S. Core TR
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol="$MSCRT"
+								exch="IXUS" fid="FSUSA00KGY" sid="XIUSA00114" pid="0P00001GK6" name="Small Core TR">
+							Small Core TR
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol="$MMCRT"
+									exch="IXUS" fid="FSUSA00KGX" sid="XIUSA00113" pid="0P00001GK5" name="Mid Core TR">
+							Mid Core TR
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol="$MLCRT"
+										exch="IXUS" fid="FSUSA00KGW" sid="XIUSA00112" pid="0P00001GK4" name="Large Core TR">
+							Large Core TR
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li id="LGrowth" menuitemstyle="subMenu">
+				<a href="javascript:void(0)" class="ms-menu-arrow">
+					Growth
+				</a>
+				<ul class="ms-menu-second" id="Growth">
+					<li>
+						<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol="$MGROT" exch="IXUS"
+					fid="FSUSA00KH2" sid="XIUSA00118" pid="0P00001GKA" name="U.S. Growth TR">
+							U.S. Growth TR
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol="$MSGRT"
+								exch="IXUS" fid="FSUSA00KGV" sid="XIUSA00111" pid="0P00001GK3" name="Small Growth TR">
+							Small Growth TR
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item"
+									symbol="$MMGRT" exch="IXUS" fid="FSUSA00KGT" sid="XIUSA00110" pid="0P00001GK2"
+									name="Mid Growth TR">Mid Growth TR</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item"
+										symbol="$MLGRT" exch="IXUS" fid="FSUSA00KGU" sid="XIUSA0010Z" pid="0P00001GK1"
+										name="Large Growth TR">Large Growth TR</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol="$MSCPT" exch="IXUS"
+			fid="FSUSA00KGS" sid="XIUSA0010Y" pid="0P00001GK0" name="U.S. Small Cap TR">
+					U.S. Small Cap TR
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol="$MMCPT"
+						exch="IXUS" fid="FSUSA00KGQ" sid="XIUSA0010X" pid="0P00001GJZ" name="U.S. Mid Cap TR">
+					U.S. Mid Cap TR
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item"
+							symbol="$MLCPT" exch="IXUS" fid="FSUSA00KH5" sid="XIUSA0010W" pid="0P00001GJY"
+							name="U.S. Large Cap TR">U.S. Large Cap TR</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)"
+								menuitemstyle="trigger" class="bmk-menu-item" symbol="$MDLTR" exch="IXUS" fid="FSUSA06LDV" sid="XIUSA04GS0"
+								pid="0P00001N2Y" name="Dividend Leaders TR">Dividend Leaders TR</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)"
+									menuitemstyle="trigger" class="bmk-menu-item" symbol="$MWMFT" exch="IXUS" fid="FSUSA07Z10" sid="FOUSA06B9O"
+									pid="0P000083OT" name="Wide Moat Focus 20 TR">Wide Moat Focus 20 TR</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol="$INFOST"
+											exch="IXUS" fid="FSUSA067L5" sid="XIUSA04G8Z" pid="0P00001MK5" name="Information Sup. Sector TR">
+					Information Sup. Sector TR
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item"
+												symbol="$MFGRST" exch="IXUS" fid="FSUSA067L7" sid="XIUSA04G91" pid="0P00001MK7"
+												name="Manufacturing Sup. Sector TR">Manufacturing Sup. Sector TR</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)"
+													menuitemstyle="trigger" class="bmk-menu-item" symbol="$SRVCST" exch="IXUS" fid="FSUSA067L6" sid="XIUSA04G90"
+													pid="0P00001MK6" name="Service Sup. Sector TR">Service Sup. Sector TR</a>
+			</li>
+		</ul>
+	</li>
+	<li id="LUS Indices" menuitemstyle="subMenu">
+		<a href="javascript:void(0)" class="ms-menu-arrow">
+			US Indices
+		</a>
+		<ul style="display: none;" class="ms-menu-second" id="US Indices">
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol="" exch="" fid="FSUSA00KB0"
+			sid="XIUSA000PF" pid="0P00001G8I" name="DJ Industrial Avg. TR">
+					DJ Industrial Avg. TR
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol="SPYZ"
+						exch="IXUS" fid="FSUSA00L2D" sid="XIUSA04G92" pid="0P00001MK8" name="S&P 500 TR">
+					S&P 500 TR
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol=""
+							exch="" fid="FSUSA00L2C" sid="XIUSA04GQL" pid="0P00001N1N" name="S&P MidCap 400 TR">
+					S&P MidCap 400 TR
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item"
+								symbol="" exch="" fid="FSUSA00L26" sid="XIUSA04GA7" pid="0P00001MLD" name="NASDAQ Composite TR">
+					NASDAQ Composite TR
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item"
+									symbol="" exch="" fid="FSUSA00L29" sid="XIUSA000O5" pid="0P00001G7E" name="Russell 2000 TR">
+					Russell 2000 TR
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li id="LCanada" menuitemstyle="subMenu">
+		<a href="javascript:void(0)" class="ms-menu-arrow">
+			Canada
+		</a>
+		<ul class="ms-menu-second" id="Canada">
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol="" exch="" fid="FSUSA0698P"
+			sid="XIUSA04GA4" pid="0P00001MLA" cur="CU$$$$$CAD" name="S&P/TSX Composite TR">
+					S&P/TSX Composite TR
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol="" exch="" fid="FSCAN07QC8"
+			sid="FOUSA0631C" pid="0P00008PAC" cur="CU$$$$$CAD" name="S&P/TSX 60 PR">
+					S&P/TSX 60 PR
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol="" exch="" fid="FSUSA06OQ7"
+			sid="XIUSA04GSM" pid="0P00001QO6" cur="CU$$$$$CAD" name="S&P/TSX Venture Composite PR">
+					S&P/TSX Venture Composite PR
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li id="LEurope" menuitemstyle="subMenu">
+		<a href="javascript:void(0)" class="ms-menu-arrow">
+			Europe
+		</a>
+		<ul class="ms-menu-second" id="Europe">
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol="" exch="" fid="FSESP07CS1"
+			sid="FOUSA06CWI" pid="0P00008ISP" name="DJ Stoxx 50 TR EUR">DJ Stoxx 50 TR EUR</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol="BEL20" exch="XBRU" fid="FSBEL079UJ"
+					sid="FOUSA05LSX" pid="0P00006F5U" name="Euronext BEL 20 PR (BEL)">
+					Euronext BEL 20 PR (BEL)
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol=""
+								exch="" fid="FSFRA00KBK" sid="FOUSA06CGQ" pid="0P00008ICW" name="Euronext Paris CAC 40 TR (FRA)">
+					Euronext Paris CAC 40 TR (FRA)
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item"
+									symbol="" exch="" fid="FSUSA05NU5" sid="XIUSA0001H" pid="0P00001FKQ" name="FTSE 100 TR (GBR)">
+					FTSE 100 TR (GBR)
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item"
+										symbol="" exch="" fid="FSUSA05NU6" sid="XIUSA04CG5" pid="0P00001IS2" name="FTSE 250 TR (GBR)">
+					FTSE 250 TR (GBR)
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item"
+											symbol="" exch="" fid="FSDEU00KC9" sid="XIUSA0001M" pid="0P00001FKV" name="FSE DAX TR (DEU)">
+					FSE DAX TR (DEU)
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li id="LAsia" menuitemstyle="subMenu">
+		<a href="javascript:void(0)" class="ms-menu-arrow">
+			Asia
+		</a>
+		<ul class="ms-menu-second" id="Asia">
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol="NI225" exch="XOSE"
+			fid="FSUSA07WXT" sid="FOUSA05SFQ" pid="0P00006MR4" cur="CU$$$$$JPY" name="Nikkei 225 PR (JPN)">
+					Nikkei 225 PR (JPN)
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item"
+						symbol="$000001" exch="XSHG" fid="FSCHN07HD4" sid="FOUSA05TC8" pid="0P00006NNM"
+						cur="CU$$$$$CNY" name="Shanghai SE Composite PR (CHN)">
+					Shanghai SE Composite PR (CHN)
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol=""
+							exch="" fid="FSUSA08YK7" sid="FOUSA06X7G" pid="0P0000GDPO" cur="CU$$$$$CNY" name="CSI 300 CNY">
+					CSI 300 CNY
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol=""
+								exch="" fid="FSHKG00KCN" sid="XIUSA0001Z" pid="0P00001FL8" cur="CU$$$$$HKD" name="Hang Seng HSI PR HKD">
+					Hang Seng HSI PR HKD
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item"
+									symbol="" exch="" fid="FSUSA06I18" sid="XIUSA04GAS" pid="0P00001MLY" cur="CU$$$$$AUD"
+									name="S&P/ASX 200 TR">S&P/ASX 200 TR</a>
+			</li>
+		</ul>
+	</li>
+	
+	<li id="LSouthAfrica" menuitemstyle="subMenu">
+		<a href="javascript:void(0)" class="ms-menu-arrow">
+			South Africa
+		</a>
+		<ul class="ms-menu-second" id="southAfrica">
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol="J303T" exch="XJSE"
+			fid="FSUSA0AQ52" sid="F00000H42L" pid="0P0000NOJ6" cur="CU$$$$$ZAR" name="FTSE/JSE All Share Capped TR ZAR">
+					FTSE/JSE All Share Capped TR ZAR
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item"
+						symbol="J400T" exch="XJSE" fid="FSZAF07CJ4" sid="F00000IRN6" pid="0P0000ONGH"
+						cur="CU$$$$$ZAR" name="FTSE/JSE Top 40 SWIX TR ZAR">
+					FTSE/JSE Top 40 SWIX TR ZAR
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol="J403T"
+							exch="XJSE" fid="FSZAF07CGL" sid="F00000IRN7" pid="0P0000ONGI" cur="CU$$$$$ZAR" name="FTSE/JSE All Share SWIX TR ZAR">
+					FTSE/JSE All Share SWIX TR ZAR
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol="J200N"
+								exch="XJSE" fid="FSZAF07CJ2" sid="F00000OZT2" pid="0P0000XAF4" cur="CU$$$$$ZAR" name="FTSE/JSE Top 40 NR ZAR">
+					FTSE/JSE Top 40 NR ZAR
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item"
+									symbol="JA3U" exch="XJSE" fid="FSUSA09UC0" sid="FOUSA08RB7" pid="0P0000JSG0" cur="CU$$$$$ZAR"
+									name="FTSE/JSE All Africa Ex South Africa ZAR">FTSE/JSE All Africa Ex South Africa ZAR</a>
+			</li>
+			
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item"
+						symbol="J203T" exch="XJSE" fid="FSZAF07CGI" sid="FOUSA08X90" pid="0P0000KKEQ"
+						cur="CU$$$$$ZAR" name="FTSE/JSE All Share TR ZAR">
+					FTSE/JSE All Share TR ZAR
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol="J253T"
+							exch="XJSE" fid="FSZAF07CHI" sid="FOUSA08X91" pid="0P0000KKER" cur="CU$$$$$ZAR" name="FTSE/JSE SA Listed Property TR ZAR">
+					FTSE/JSE SA Listed Property TR ZAR
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol="J202T"
+								exch="XJSE" fid="FSZAF07CIW" sid="FOUSA08YZV" pid="0P0000KTZG" cur="CU$$$$$ZAR" name="FTSE/JSE Small Cap TR ZAR">
+					FTSE/JSE Small Cap TR ZAR
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item"
+									symbol="J250T" exch="XJSE" fid="FSZAF07CH9" sid="FOUSA08Z04" pid="0P0000KTZP" cur="CU$$$$$ZAR"
+									name="FTSE/JSE Financials&Indl TR ZAR">FTSE/JSE Financials&Indl TR ZAR</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item"
+									symbol="J257T" exch="XJSE" fid="FSZAF07CGJ" sid="FOUSA08Z08" pid="0P0000KTZT" cur="CU$$$$$ZAR"
+									name="FTSE/JSE SA Industrials TR ZAR">FTSE/JSE SA Industrials TR ZAR</a>
+			</li>
+			
+			<li>
+				<a href="javascript:void(0)" menuitemstyle="trigger" class="bmk-menu-item" symbol="J258T" exch="XJSE"
+			fid="FSZAF07CHJ" sid="FOUSA08Z09" pid="0P0000KTZU" cur="CU$$$$$ZAR" name="FTSE/JSE SA Resources TR ZAR">
+					FTSE/JSE SA Resources TR ZAR
+				</a>
+			</li>
+		</ul>
+	</li>
+	
+</ul>				            </div>
+				        </div>
+        				<div class="contain_rec">
+							<div class="text">
+								<a class="ms-gl-font10" href="javascript:clearAll();" gkey="ClearAll">Clear All</a>
+								<h4 class="ms-gl-font10" gkey="RecentSecurities">Recent Securities & Benchmarks (max. active = 5)</h4>
+							</div>
+							<ul class="recent_ctrl" id="gr_ctrl_recent">
+								<!--li class="on"><a class="on" href="javascript:void(0);" idx="0">ORCL<span>Oracle Corporation</span></a><a
+									href="javascript:void(0)" rdx="0" class="close">x</a></li>
+								<li><a class="on" href="javascript:void(0);" idx="1">HPQ</a><a href="javascript:void(0)"
+									rdx="1" class="close">x</a></li -->
+							</ul>
+						</div>
+					</div>
+					<div class="iefix">
+					</div>
+		<div class="r_tbar1"> 
+			<h3>Growth of 10,000</h3> 
+			<h2>&nbsp;AA</h2> 
+		</div> 
+ 
+     	<!--ul class="in_tabs"> 
+        	<li><a tabname="#total-return-tab" onclick="onPerformanceHistoryClick('#div_total_returns', 'price','en-US');" class="tabon">Total Returns</a></li> 
+        	<li><a tabname="#growth-tab" onclick="onPerformanceHistoryClick('#div_growth_10k', 'growth','en-US');">Growth of 10,000</a></li> 
+        </ul--> 
+  	 	<!--div class="tab_content tab_override" id="total-return-tab" style="display:block;"--> 
+			<div id="div_total_returns"></div>
+		<!--/div-->
+  	 	<div class="tab_content tab_override" id="growth-tab" style="display:none;"> 
+			<div id="div_growth_10k"></div>
+		</div>
+					</div> <!-- end colp col3 div from performance.ftl -->
+			        <div class="vspacer1" id="spacer">&nbsp;</div>
+					<div class="col2" id="adright">
+						<div class="hspacer0"></div>
+						<div class="ad_rect_contr"><!--begin rectangle ad container-->
+							<div id="OAS_Middle"><script language="javascript" type="text/javascript">OAS_AD('rectangletopright');</script></div>
+						</div><!--end rectangle ad container-->
+						<div class="ad_text_contr"><!--begin text ad container-->
+							<div id="OAS_Left2">
+								<script language="javascript" type="text/javascript">OAS_AD('chrtxt65top');</script>
+							</div>
+						</div><!--end text ad container-->
+					</div>   
+					<div class="hspacer3">
+					</div>
+					<div class="r_tbar1">
+						<h3>
+							Trailing Total Returns</h3>
+						<h2>&nbsp;AA</h2>
+					</div>
+					<ul class="in_tabs">
+						<li><a tabname="#tabday" onclick="onTrailingReturnsClick('d', '#tab-1day-content', 'ST','en-US');" class="tabon">
+							Daily</a></li>
+						<li><a tabname="#tabmonth" onclick="onTrailingReturnsClick('m', '#tab-month-end-content', 'ST','en-US');">
+							Monthly</a></li>
+						<li><a tabname="#tabquarter" onclick="onTrailingReturnsClick('q', '#tab-quar-end-content', 'ST','en-US');">
+							Quarterly</a></li>
+					</ul>
+					<div class="tab_content tab_override" id="tabday" style="display: block;">
+						<!--div id="tab-legends-d"></div-->
+						<!--div style="width: 700px;">
+							<div style="display: block; width: 958px; height:200px;" id="floatingbarchart_d"></div>
+						</div-->
+						<div id="tab-1day-content"></div>
+					</div>
+					<div class="tab_content tab_override" id="tabmonth" style="display: none;">
+						<!--div id="tab-legends-m"></div>
+						<div style="width: 700px">
+							<div style="display: block; width: 958px; height:200px;" id="floatingbarchart_m"></div>
+						</div-->
+						<div id="tab-month-end-content"></div>
+					</div>
+					<div class="tab_content tab_override" id="tabquarter" style="display: none;">
+						<!--div id="tab-legends-q"></div>
+						<div style="width: 700px">
+							<div style="display: block; width: 958px; height:200px;" id="floatingbarchart_q"></div>
+						</div-->
+						<div id="tab-quar-end-content"></div>
+					</div>
+				
+					
+
+					<div class="r_note">S&amp;P 500 index data: S&amp;P 500 Copyright &#xA9; 2020<br />Currency is displayed in USD.<br /></div>
+					<div class="hspacer3">
+					</div>
+					
+<script type="text/javascript" charset="utf-8">
+
+</script>
+				</div><!-- end total_returns_page -->
+				</div><!-- end inner col5 -->			
+				<div id="price_history_page" style="display:none">
+					<div class="hspacer0"></div>
+  
+<style type="text/css">
+		a.large_button_export {
+    background: url("//performance.morningstar.com/perform/static/common/img/b_slice_off.gif") repeat scroll 0 0 transparent;
+    border-color: #E1E1E1 #B9B9B9 #B9B9B9 #E1E1E1;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000;
+    cursor: pointer;
+    display: inline;
+    float: right;
+    font-size: 10px; 
+    height: 18px;
+    line-height: 18px;
+    margin: 0 0px 0 0;
+    text-align: center;
+    text-decoration: none;
+    width: 76px;  
+    align:right; 
+}
+
+.csv_export {
+    background: url("//performance.morningstar.com/perform/static/common/img/rep_sprite.gif?ver=1.0.2") no-repeat scroll -106px -92px transparent;
+    display: inline-block;
+    float: right;
+    height: 13px;
+    margin: 2px 10px 0 0;
+    overflow: hidden;
+    width: 11px;
+}
+</style>
+
+
+    <div class="r_tbar0" href="#">
+        <h3>Historical Prices</h3>
+        <h2>&nbsp;AA</h2>
+        <a class="large_button_export" href="javascript:exportPrice()" ><span class="csv_export"></span>
+        		<div>Export</div>
+        </a>
+    </div>
+    
+    <div class="r_time_wrap">
+        <div class="r_time_contain" id="date-range-input">
+            <div class="label">Date Range</div>
+            <input type="text" id="stock_historical_prices_start_date" value="00/00/00" onkeypress="if (event.keyCode == 13) { priceHistory_onClickDateRange('custom', this,'en-US'); priceHistory_manageButtons($('#price_history_custom'),event); }" />
+            
+            <span class="hyphen">&ndash;</span>
+            <input type="text" id="stock_historical_prices_end_date" value="00/00/00" onkeypress="if (event.keyCode == 13) { priceHistory_onClickDateRange('custom', this,'en-US'); priceHistory_manageButtons($('#price_history_custom'),event); }" />
+        </div>
+        <div class="r_time_contain" id="date-range-buttons">
+        	<div class="label">&nbsp;</div>
+            <a href="javascript:priceHistory_onClickDateRange('5d', this,'en-US');" class="small_button on">5D</a>
+            <a href="javascript:priceHistory_onClickDateRange('1m', this,'en-US');" class="small_button">1M</a>
+            <a href="javascript:priceHistory_onClickDateRange('3m', this,'en-US');" class="small_button">3M</a>
+            <a href="javascript:priceHistory_onClickDateRange('ytd', this,'en-US');" class="small_button">YTD</a>
+            <a href="javascript:priceHistory_onClickDateRange('1y', this,'en-US');" class="small_button">1Y</a>
+            <a href="javascript:priceHistory_onClickDateRange('3y', this,'en-US');" class="small_button">3Y</a>
+            <a href="javascript:priceHistory_onClickDateRange('5y', this,'en-US');" class="small_button">5Y</a>
+            <a href="javascript:priceHistory_onClickDateRange('10y', this,'en-US');" class="small_button">10Y</a>
+            <a href="javascript:priceHistory_onClickDateRange('max', this,'en-US');" class="small_button">Max</a>
+            <a href="javascript:priceHistory_onClickDateRange('custom', this,'en-US');" id="price_history_custom" class="large_button">Custom</a>
+        </div>
+        <div class="r_time_contain" id="frequency-buttons">
+        	<div class="label" >Frequency
+        	
+        	</div>
+        	
+            <a href="javascript:priceHistory_onClickFrequency('d','en-US');" class="large_button on">Daily</a>
+            <a href="javascript:priceHistory_onClickFrequency('w','en-US');" class="large_button">Weekly</a>
+            <a href="javascript:priceHistory_onClickFrequency('m','en-US');" class="large_button">Monthly</a>
+            <a href="javascript:priceHistory_onClickFrequency('q','en-US');" class="large_button">Quarterly</a>
+            <a href="javascript:priceHistory_onClickFrequency('a','en-US');" class="large_button">Yearly</a>
+        </div>
+    </div>
+    
+	<div id="div_price_history">
+	</div>
+
+	
+    <!--div class="r_pager_wrap">
+	    <div class="r_pager_input_contain r_pager_text2">Page
+	        <input name="pageinput" class="r_pager_input" onclick="ClearSearchBox('search')" type="text" />&nbsp;of 3
+	    </div>
+	    <div class="r_pager_contain">
+	        <div class="r_pagerOff r_pager_text">previous</div>
+	        <div class="r_pagerOn r_pager_text">1</div>
+	        <a href="#" class="r_pager r_pager_text">2</a>
+	
+	        <a href="#" class="r_pager r_pager_text">3</a>
+	        <a href="#" class="r_pager r_pager_text">next</a>
+	    </div>
+	</div-->
+
+				</div><!-- end price_history_page -->
+
+				<div id="dividend_split_page" style="display:none">
+				<div class="hspacer0"></div>
+    
+    <div class="r_tbar0">
+        <h3>Upcoming Dividends</h3>
+        <h2>&nbsp;AA</h2>
+    </div>
+    
+	<div id="div_upcoming_dividends">
+	</div>
+ 
+    <div class="hspacer3"></div>
+    
+    <div class="r_tbar1 border">
+    	<h3>Five Year Dividend History</h3>
+        <h2>&nbsp;AA</h2>
+    </div>
+    
+    <div id="div_annual_dividends">
+    </div>
+    
+	<div id="div_dividend_history">
+	</div>
+	
+    <div id="div_split_history" class="col2">
+	</div>
+	
+	<div class="vspacer1">&nbsp;</div>
+	    
+	<div id="div_spinoff_history" class="col3">
+	</div>
+				</div><!-- end dividend_split_page -->
+			</div> 
+			
+			<!-- end col5 -->
+		</div><!-- end body_wrap -->
+<div class="footerwrap">
+	
+		
+	<!--[If !IE]> start leaderboard ads <![endif]-->
+    <div class="f_Ads">
+        <div class="f_Ads_row1">
+            <div class="f_leaderad">
+                            <div id="OAS_Bottom">
+                  <script type="text/javascript">
+				      OAS_AD('footer');
+				</script>
+                </div>
+            </div>
+            <!--
+            <div class="f_Ads_col1">Content Partners
+            	<div class="f_partner1"></div>
+              	<div class="f_partner2"></div>
+        	</div>
+        	-->
+        </div>
+	</div>  <!--[If !IE]> end leaderboard ads <![endif]-->
+ 
+  	<div class="f_Directory">
+        <div class="f_Directory_row1">
+			<a id="nav1" class="f_sdirtab" title="Morningstar.com Site Directory" onclick="javascript:getSiteFooter('siteDirectoryContent', this);">Site Directory</a>
+          	<a id="nav2" class="f_sdirtab" title="Morningstar.com Site Map" onclick="javascript:getSiteFooter('siteMapContent', this);">Site Map</a>
+          	<a id="nav3" class="f_sdirtab" title="Morningstar.com Products" onclick="javascript:getSiteFooter('productsContent', this);">Our Products</a>
+            <div class="f_sdirsearch">
+               	<input id="AutoCompleteBoxFooter" name="sSrchTerm" value="" class="h_quote" autocomplete="off" maxlength="256" type="text" ></input>
+              	<a class="hqt_button" onclick="FooterBox.trySubmit()" href="javascript:void(0)"></a>                   
+	           	<form name="searchFormFooter" method="post" onsubmit="srchTerm('searchFooter')" style="margin: 0px; padding: 0px;float:left;">                        
+                <input name="sSrchTerm" value="" class="h_search" onclick="ClearSearchBox('searchFooter')" type="text"></input>
+                <input name="SrchTerm" type="hidden">
+                <a href="javascript:srchTerm('searchFooter')" class="hsr_button"></a>
+            </form>
+            </div> 
+   		</div>
+        <!--[If !IE]> start site directory <![endif]-->
+        <div class="f_Directory_row2" id="siteDirectoryContent" style="display:none;">
+  
+        </div>  <!--[If !IE]> end site directory <![endif]-->
+        
+        <!--[If !IE]> start site smap <![endif]-->
+        <div class="f_Directory_row2" id="siteMapContent" style="display:none;">
+              
+            <!--[If !IE]> end smapwrap <![endif]-->
+        </div>  <!--[If !IE]> end site map <![endif]-->
+        
+        <!--[If !IE]> start products <![endif]-->
+        <div class="f_Directory_row2" id="productsContent" style="display:none;">
+               <!--[If !IE]> end prodwrap <![endif]-->
+    	</div>  <!--[If !IE]> end products <![endif]-->
+ 
+    </div><!--[If !IE]> end directory <![endif]-->
+
+    <!--[If !IE]> start links <![endif]-->
+    <div class="f_Links">
+        <div class="f_Links_row1">
+        	<a href="//news.morningstar.com/Corrections/CorrectionsList.html" class="f_text3">Corrections</a>
+            <a href="//www.morningstar.com/Cover/Help.html" class="f_text3">Help</a>
+            <a href="//www.morningstar.com/AboutUs/MediaKit.html" class="f_text3">Advertising Opportunities</a>
+            <a href="//members.morningstar.com/reprints/rp_home.html" class="f_text3">Licensing Opportunities</a>
+            <a href="//www.morningstar.com/InvGlossary/?CustId=&CLogin=&CType=&CName=" class="f_text3">Glossary</a>
+            <a href="//news.morningstar.com/rss/rss.html" class="f_text3">RSS</a>
+            <a href="//mobile.morningstar.com/(S(dqff4gf55gvf0ub4h4bi2145))/mobileport.aspx" class="f_text3">Mobile Portfolio</a>
+            <a href="//members.morningstar.com/memberstpages/Morningstar_Affiliate.html" class="f_text3">Affiliate</a>
+            <a href="//corporate.morningstar.com/US/asp/subject.aspx?xmlfile=361.xml" class="f_text3">Careers</a>        </div>
+  	</div>  <!--[If !IE]> end links <![endif]-->
+    
+    <!--[If !IE]> start international sites <![endif]-->
+    <div class="f_Sites">
+        <div class="f_Sites_row1">International Sites:
+        	<a href="//www.morningstar.com.au/" class="f_text4">Australia</a>
+            <a href="//www.morningstar.ca/" class="f_text4">Canada</a>
+            <a href="//www.cn.morningstar.com/main/default.aspx" class="f_text4">China</a>
+            <a href="//www.morningstar.fr/" class="f_text4">France</a>
+            <a href="//www.morningstarfonds.de/de/default.aspx?lang=de-DE" class="f_text4">Germany</a>
+            <a href="//www.hk.morningstar.com/" class="f_text4">Hong Kong</a>
+            <a href="//www.morningstar.it/it/default.aspx?lang=it-IT" class="f_text4">Italy</a>
+            <a href="//www.morningstar.nl/nl/default.aspx?lang=nl-NL" class="f_text4">The Netherlands</a>
+            <a href="//www.morningstar.no/" class="f_text4">Norway</a>
+            <a href="//www.morningstar.es/es/default.aspx?lang=es-ES" class="f_text4">Spain</a>
+            <a href="//www.morningstar.co.uk/uk/default.aspx" class="f_text4">U.K.</a>        
+        	<a href="//www.morningstar.ch" class="f_text4">Switzerland</a>
+        </div>
+  	</div>  <!--[If !IE]> end international sites <![endif]-->
+    
+    <!--[If !IE]> start copyright, seo <![endif]-->
+    <div class="f_Copyright">
+     <div class="ya_cnt1">
+    <div class="ya_grp1">
+        <div class="ya_row2">Stocks by:
+            <a href="http://www.morningstar.com/invest/stocks/index1.html" class="f_text4">Name</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/stocks/indexb1.html" class="f_text4">Ticker</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/stocks/indexc1.html" class="f_text4">Star Rating</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/stocks/indexd1.html" class="f_text4">Market Cap</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/stocks/indexe1.html" class="f_text4">Stock Type</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/stocks/indexf1.html" class="f_text4">Sector</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/stocks/indexg1.html" class="f_text4">Industry</a>
+        </div>
+    </div>
+    <div class="ya_grp2">
+        <div class="ya_row2">Mutual Funds by:
+            <a href="http://www.morningstar.com/invest/funds/index1.html" class="f_text4">Star Rating</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/funds/indexb1.html" class="f_text4">Investment Style</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/funds/indexc1.html" class="f_text4">Total Assets</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/funds/indexd1.html" class="f_text4">Category</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/funds/indexe1.html" class="f_text4">Top Holdings</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/funds/indexf1.html" class="f_text4">Top Sectors</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/funds/indexg1.html" class="f_text4">Symbol / Ticker</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/funds/indexh1.html" class="f_text4">Name</a>
+        </div>
+    </div>
+    <div class="ya_grp3">
+        <div class="ya_row2">ETFs by:
+            <a href="http://www.morningstar.com/invest/etf/index1.html" class="f_text4">Star Rating</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/etf/indexb1.html" class="f_text4">Category</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/etf/indexc1.html" class="f_text4">Total Assets</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/etf/indexd1.html" class="f_text4">Symbol / Ticker</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/etf/indexe1.html" class="f_text4">Name</a>
+        </div>
+    </div>
+    <div class="ya_grp1">
+        <div class="ya_row2">Articles by:
+            <a href="http://www.morningstar.com/invest/articles/index1.html" class="f_text4">Title</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/articles/indexb1.html" class="f_text4">Date</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/articles/indexc1.html" class="f_text4">Author</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/articles/indexd1.html" class="f_text4">Collection</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/articles/indexe1.html" class="f_text4">Interest</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/articles/indexf1.html" class="f_text4">Popularity</a>
+        </div>
+    </div>
+    <div class="ya_grp3">
+        <div class="ya_row2">Investment Categories by:
+            <a href="http://www.morningstar.com/invest/categories/index1.html" class="f_text4">Topic</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/categories/indexb1.html" class="f_text4">Sector</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/categories/indexc1.html" class="f_text4">Key Indicators</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/categories/indexd1.html" class="f_text4">User Interest</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/categories/indexe1.html" class="f_text4">Market Cap</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/categories/indexf1.html" class="f_text4">Industry</a>
+        </div>
+    </div>
+    <div class="ya_grp2">
+        <div class="ya_row2">Premium Stocks by:
+            <a href="http://www.morningstar.com/invest/premium-stocks/index1.html" class="f_text4">Name</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/premium-stocks/indexb1.html" class="f_text4">Ticker</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/premium-stocks/indexc1.html" class="f_text4">Star Rating</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/premium-stocks/indexd1.html" class="f_text4">Market Cap</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/premium-stocks/indexe1.html" class="f_text4">Stock Type</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/premium-stocks/indexf1.html" class="f_text4">Sector</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/premium-stocks/indexg1.html" class="f_text4">Industry</a>
+        </div>
+    </div>
+    <div class="ya_grp3">
+        <div class="ya_row2">Premium Mutual Funds by:
+            <a href="http://www.morningstar.com/invest/premium-funds/index1.html" class="f_text4">Star Rating</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/premium-funds/indexb1.html" class="f_text4">Investment Style</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/premium-funds/indexc1.html" class="f_text4">Total Assets</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/premium-funds/indexd1.html" class="f_text4">Category</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/premium-funds/indexe1.html" class="f_text4">Top Holdings</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/premium-funds/indexf1.html" class="f_text4">Top Sectors</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/premium-funds/indexg1.html" class="f_text4">Symbol / Ticker</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/premium-funds/indexh1.html" class="f_text4">Name</a>
+        </div>
+    </div>
+    <div class="ya_grp3">
+        <div class="ya_row2">Premium ETFs by:
+            <a href="http://www.morningstar.com/invest/premium-etf/index1.html" class="f_text4">Star Rating</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/premium-etf/indexb1.html" class="f_text4">Category</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/premium-etf/indexc1.html" class="f_text4">Total Assets</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/premium-etf/indexd1.html" class="f_text4">Symbol / Ticker</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/premium-etf/indexe1.html" class="f_text4">Name</a>
+        </div>
+    </div>
+    <div class="ya_grp3">
+        <div class="ya_row2">Popular Articles by:
+            <a href="http://www.morningstar.com/invest/popular-articles/index1.html" class="f_text4">Title</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/popular-articles/indexb1.html" class="f_text4">Date</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/popular-articles/indexc1.html" class="f_text4">Author</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/popular-articles/indexd1.html" class="f_text4">Collection</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/popular-articles/indexe1.html" class="f_text4">Interest</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/popular-articles/indexf1.html" class="f_text4">Popularity</a>
+        </div>
+    </div>
+    <div class="ya_grp3">
+        <div class="ya_row2">Popular Investment Categories by:
+            <a href="http://www.morningstar.com/invest/popular-categories/index1.html" class="f_text4">Topic</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/popular-categories/indexb1.html" class="f_text4">Sector</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/popular-categories/indexc1.html" class="f_text4">Key Indicators</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/popular-categories/indexd1.html" class="f_text4">User Interest</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/popular-categories/indexe1.html" class="f_text4">Market Cap</a>
+            <span>|</span>
+            <a href="http://www.morningstar.com/invest/popular-categories/indexf1.html" class="f_text4">Industry</a>
+        </div>
+    </div>
+    <div class="ya_bottom1"></div>
+</div>
+    
+        <div class="f_Copyright_row1">Independent. Insightful. Trusted. Morningstar provides stock market analysis; equity, mutual fund, and ETF research, ratings, and picks; portfolio tools; and option, hedge fund, IRA, 401k, and 529 plan research. Our reliable data and analysis can help both experienced enthusiasts and newcomers.<br /><br />
+        &copy; Copyright <script type="text/javascript">var now = new Date();var year = now.getFullYear();document.write(year);</script> Morningstar, Inc. All rights reserved. Please read our <a class="f_text4" href="//www.morningstar.com/AboutUs/copyright.html" rel="nofollow" >Terms of Use</a>and <a class="f_text4" href="//members.morningstar.com/memberstpages/PrivacyPolicy.html" rel="nofollow" >Privacy Policy.</a>Dow Jones Industrial Average, S&P 500, Nasdaq, and Morningstar Index (Market Barometer) quotes are real-time. Russell 2000 quote is 10 minutes delayed.</div>
+  	</div>  <!--[If !IE]> end copyright, seo <![endif]-->
+  	<div>
+
+
+  
+
+
+</div>
+</div>  <!--[If !IE]> end footerwrap <![endif]-->    
+    
+<div id="AutoCompleteDropDownFooter" ></div> 
+<!-- live  -->
+	<script language="javascript">var contextPath="//performance.morningstar.com/perform";</script>
+    <script src="//performance.morningstar.com/perform/static/common/js/mstar_v1.3.js" language="javascript"></script>
+
+<script language='javascript'>
+var tickerTapeObj = new TickerTape1("tickerTapeObj","TickerWrapper","",2);
+</script>
+
+<div id="Hidden_OAS_x61" style="display: none;"><script language="javascript" type="text/javascript">
+		<!--
+		   OAS_AD('tickertapebutton');
+		//-->
+</script></div>
+
+<script language='javascript'>
+    function getObj(name) {
+			if (document.getElementById) this.obj = document.getElementById(name);
+			else if (document.all) this.obj = document.all[name];
+			else if (document.layers) this.obj = document.layers[name];
+			if (this.obj) this.style = this.obj.style;
+		}
+  var object_togo = new getObj('OAS_x61');
+  var object_tomove = new getObj('Hidden_OAS_x61');
+  if (object_togo.obj!=null && object_tomove.obj!=null) 
+	{ 
+	  object_togo.obj.appendChild(object_tomove.obj);
+	  object_tomove.style.display = "inline";
+	}
+  /* if (document.getElementById) {
+     var x61Obje= document.getElementById("OAS_x61");
+     if(x61Obje!=null){
+        var jsE = document.createElement("script");
+        jsE.setAttribute("type", "text/javascript");
+        jsE.setAttribute("value", "OAS_AD('tickertapebutton');");
+        x61Obje.appendChild(jsE);
+     }
+   }*/
+   
+var HeaderBox = initBoxQuote("AutoCompleteBox","AutoCompleteDropDown");
+HeaderBox.IdleDisplayMsg = "";
+HeaderBox.LocalRegion="USA";
+HeaderBox.SetPreference('USA','EN',32);
+var FooterBox = initBoxQuote("AutoCompleteBoxFooter","AutoCompleteDropDownFooter");
+FooterBox.IdleDisplayMsg = "";
+FooterBox.LocalRegion="USA";
+FooterBox.SetPreference('USA','EN',32);
+
+
+//clears all content/image boxes--------------------------------------------------------------------------------------
+var imageIDs=new Array('siteDirectoryContent', 'siteMapContent', 'productsContent'); //content boxes
+</script>
+
+
+<script src="//performance.morningstar.com/perform/static/common/js/tracking_user_cgmn_c.js" language=javascript></script>
+
+<style type="text/css">
+.mi_row3{display: none}
+</style>                                      
+
+<script language="javascript">
+$(window).unload(function(){
+	var ScrollY = 0;//window.pageYOffset || document.documentElement.scrollTop || 0;
+	document.cookie = "ScrollY=" + ScrollY + ";path=/;domain=.morningstar.com;";
+});
+
+//Read and scroll
+function ReadCookieAndScroll(){
+	var ScrollY = GetCookie("ScrollY");
+    if (ScrollY !== "" && !isNaN(ScrollY))
+    	window.scrollTo(0, ScrollY); 
+}
+
+function GetCookie(name){
+	if(document.cookie.length<=0)
+    	return "";
+
+   	name += "=";
+    var start = document.cookie.indexOf(name);
+    if (start < 0)
+       return "";
+
+	start += name.length;
+    var end = document.cookie.indexOf(";",start);
+    if (end < 0)
+    	end = document.cookie.length;
+              
+   	return document.cookie.substring(start,end);
+}
+
+//var bloomreachConfig = {
+//"category" : "Performance Total Returns",
+//"productName" : "AA"
+//};
+//setBoolemreachConfig(bloomreachConfig);
+
+</script>
+<script language="javascript">
+function turnon(b) {
+for ( var a = 1; a <= 12; a++) {
+	//document.getElementById("Tabmenu" + a).className = "sdir_menu";
+	document.getElementById("menu" + a).style.display = "none"
+}
+	document.getElementById("Tab" + b).className = "sdir_menuOn";
+	document.getElementById(b).style.display = "block"
+} 
+</script>	</div><!-- end wrapper -->
+	
+	<script type="text/javascript" charset="utf-8">
+		$('#expand').click(function () {
+			$('.colp').removeClass('col3').addClass('col5');
+			$('#chart').css('margin-left','0px');
+			$('#adright').css('display','none');
+			$('#spacer').css('display','none');
+			$('#expand').addClass('on');
+			$('#collapse').removeClass('on');
+			$('#compare_perf').css('width','953px')
+            $('#table_headers').removeClass('marginleft').addClass('marginleft1');
+			$('.contain_rec').find('.text').css('display','');
+			g_year=10;
+			loadStockPerformanceHistory(g_symbol,g_currency,"growth",g_culture,"true");
+		});
+		$('#collapse').click(function () {
+			$('.colp').removeClass('col5').addClass('col3');
+			$('#chart').css('margin-left','-389px');
+			$('#spacer').css('display','block');
+			$('#adright').css('display','block');
+			$('#collapse').addClass('on');
+			$('#expand').removeClass('on');
+			$('#compare_perf').css('width','563px')
+            $('#table_headers').removeClass('marginleft1').addClass('marginleft');
+			$('.contain_rec').find('.text').css('display','none');
+			g_year=5;
+			loadStockPerformanceHistory(g_symbol,g_currency,"growth",g_culture,"true");
+		});
+	</script>
+
+	
+
+</body>
+</html>

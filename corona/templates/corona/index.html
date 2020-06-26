@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+{% load corona_extras %}
+{% load static %}
+<html>
+<head>
+    <!-- jQuery -->
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+  <!-- Fengyuan Chen's Datepicker -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css" integrity="sha256-b88RdwbRJEzRx95nCuuva+hO5ExvXXnpX+78h8DjyOE=" crossorigin="anonymous" />
+  <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+  <link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css'>
+  <link rel='stylesheet' type='text/css' href='https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css'>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js" integrity="sha256-/7FLTdzP6CfC1VBAj/rsp3Rinuuu9leMRGd354hvk0k=" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+  background: rgb(63,94,251);
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+
+.dataTables_wrapper {
+}
+input {
+  margin-left: 10px;
+  font-size:30px;
+}
+
+/* Style tab links */
+.tablink {
+  font-size: 45px;
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+  border: 1px solid #fff;
+  float: left;
+  border: 3px solid #fff;
+  word-wrap: break-word;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  margin-right: 75px;
+  margin-left: 85px;
+  font-size: 17px;
+  width: 15%;
+  position: relative;
+  left: 60px;
+  top: 60px;
+  text-decoration: none;
+  transition: background-color 0.2s ease-out,
+              color 0.2s ease-out;
+}
+
+.tablink:hover {
+    background-color: #000000;
+  opacity:1;
+}
+
+.tablink:active {
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s ease-in,
+              color 0.3s ease-in;
+    background-color: #fff; /* fallback */
+  background-color: rgba(255, 255, 255, 0.4);
+  border-color: #fff; /* fallback */
+  border-color: rgba(255, 255, 255, 0.4);
+}
+#start{
+  position: relative;
+  top: 150px;
+   text-align: center;
+   margin-left: 39%;
+   display: block;;
+}
+
+input[type=text]::-webkit-inner-spin-button,
+input[type=text]::-webkit-outer-spin-button {
+
+   opacity: 1;
+
+}
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+  width:100%;
+}
+#submitid {
+border-radius: 24px;
+height:50px;
+width:200px;
+}
+.headers{
+  position: relative;
+  }
+#Volume {
+  text-align: center;
+  display: block;
+  width: 100%;
+  position: relative;
+  top:10%;
+}
+#Earnings {background-color: #336699;}
+#Growth {background-color: #0066CC;}
+#About {background-color: #0099CC;}
+
+table {
+  font-family: Droid Serif;
+  font-size: 24px;
+  border: 3px solid white;
+
+}
+.fms{
+  color: white;
+  font-size: 28px;
+  margin-bottom:15px;
+}
+.fmsIn{
+  height: 50px;
+  width: 200px;
+  margin-bottom:40px;
+  }
+
+table.dataTable{
+    margin-bottom: 0 !important;
+}
+
+tr:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+tr {
+    border: 10px solid black;
+}
+
+td {
+    background-color: white; /* or #000 */
+}
+td, th {
+  color: black;
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+#submitid{
+  background: linear-gradient(to bottom, #66ccff 0%, #6699ff 10%);
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+.dataTables_paginate{
+  color: white;
+}
+
+</style>
+</head>
+<body>
+
+<h1 style="text-align: center; color: white;">Stock Exchange</h1>
+<div id="headers">
+  <a style = "font-size: 30px; " class="tablink" onclick="openPage('Volume', this, 'linear-gradient(to bottom, #66ccff 0%, #6699ff 10%)')" id="defaultOpen">Biggest Dip</a>
+  <a style = "font-size: 30px; " class="tablink" onclick="openPage('Earnings', this, 'linear-gradient(to bottom, #33ccff 24%, #99ff99 100%)')">Earnings</a>
+  <a style = "font-size: 30px; " class="tablink" onclick="openPage('Growth', this, '#0066CC')">Growth</a>
+  <a style = "font-size: 30px; " class="tablink" onclick="openPage('About', this, '#0099CC')">About</a>
+</div>
+
+<div id="Volume" class="tabcontent">
+  <form style="" id="start" method="POST">
+    {% csrf_token %}
+    <label style="float: left;  margin-right:20px;" class="fms">Start Date  </label>
+    <input style="display: block;" class="fmsIn" type="text" height="50" id="datepicker" name="start" required>
+    <label style="float: left;  margin-right:26px;" class="fms">End Date  </label>
+    <input style="display: block;" class="fmsIn" type="text" height="50" id="datepicker2" name="end" equired>
+    <label style="float: left; margin-right:85px;" class="fms">Limit</label>
+    <input style="display: block; " class="fmsIn" type="number" name="limit" required>
+    <input style="display:block; margin-left:12.5%;" id="submitid" type="submit" name="Volume" value="Search" size="20">
+  </form>
+  {% if headers %}
+    <table id="stocks" class="table table-striped table-bordered hover">
+      <thead>
+        <tr>
+          {% for header in headers %}
+            <th style="color:white;">{{ header }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for report in reports %}
+          <tr>
+            <td>{{ report.id }}</td>
+            <td>{{ report.symbol }}</td>
+            <td>{{ report.name }}</td>
+            <td>{{ report.start }}</td>
+            <td>{{ report.end }}</td>
+            <td>{{ report.Difference }}</td>
+            <td>{{ report.day_avg_30 }}</td>
+            <td>{{ report.zac_score }}</td>
+            <td>{{ report.zac_score_value }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endif %}
+</div>
+<div id="Earnings" class="tabcontent">
+  <h3>Earnings</h3>
+  <p>Some news this fine day!</p>
+</div>
+
+<div id="Growth" class="tabcontent">
+  <h3>Growth</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
+<script>
+{% if headers %}
+document.getElementById("start").style.display = "none";
+$(document).ready( function () {
+    $('#stocks').DataTable({
+        "columns": [
+            { "type": "num" },
+            { "type": "html" },
+            { "type": "html" },
+            { "type": "num" },
+            { "type": "num" },
+            { "type": "num" },
+            { "type": "num" },
+            { "type": "num" },
+            { "type": "html" }
+          ],
+        "order": [[ 5, "asc" ]],
+        "paging": true,
+        "scrollCollapse": false,
+        "pagingType": "full_numbers",
+        "iDisplayLength": 20,
+        "dom": '<"top"ifp>rt<"bottom"l><"clear">'
+    });
+} );
+{% endif %}
+$('.dataTables_wrapper').css("background-color", "#ffffff");
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.background = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.background = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+<script>
+  $(function () {
+    $("#datepicker").datepicker({
+    format:'yyyy/mm/dd',
+    startDate: "2016/01/04",
+    endDate: {{ date }},
+    autoHide: true
+  });
+  });
+
+  $(function () {
+    $("#datepicker2").datepicker({
+    format:'yyyy/mm/dd',
+    startDate: "2016/01/04",
+    endDate: {{ date }},
+    autoHide: true
+  });
+  });
+</script>
+<style>
+  tr.even:hover {
+    background-color: grey;
+    cursor: pointer;
+}
+</style>
+</body>
+</html>

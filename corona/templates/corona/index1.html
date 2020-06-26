@@ -1,0 +1,104 @@
+{% load corona_extras %}
+{% load static %}
+<html>
+<head>
+<style>
+
+
+#stockpick {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  margin-top: -50px;
+  margin-left: -100px;
+}
+
+
+td:hover {
+    background-color: white;
+}
+
+td {
+    background-color: transparent; /* or #000 */
+}
+td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+
+</style>
+</head>
+<body style="background-color:powderblue;">
+
+<h2 style="text-align: center;">Biggest Droppers</h2>
+
+<table class="table table-bordered" style="background-color:lightgrey;">
+  <thead>
+    <tr>
+      <th onclick="unhighlight();">Symbol</th>
+      <th>Name</th>
+      <th>Difference {{ start }} - {{ end }} ( {{ delta }} days)</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for report in reports %}
+      <tr>
+        <td id={{ report.symbol }} onclick="symbolclick( '{{ report.symbol }}' );event.preventDefault();">{{ report.symbol }}</td>
+        <td>{{ report.name }}</td>
+        <td>{{ report.Difference }} %</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<div class="pag">
+{% if reports.has_other_pages %}
+  <ul class="pagination">
+    {% if reports.has_previous %}
+      <li><a href="?{% url_replace page=reports.previous_page_number %}">&laquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&laquo;</span></li>
+    {% endif %}
+    {% for i in reports.paginator.page_range %}
+      {% if reports.number == i %}
+        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li><a href="?{% url_replace page=i %}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if reports.has_next %}
+      <li><a href="?{% url_replace page=reports.next_page_number %}">&raquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&raquo;</span></li>
+    {% endif %}
+  </ul>
+{% endif %}
+</div>
+<div id="stockpick">
+  <img src="">
+</div>
+<script type="text/javascript">
+
+function symbolclick( symbol) {
+  unhighlight();
+  document.getElementById(symbol).style.background = "white";
+  document.getElementById("stockpick").getElementsByTagName('img')[0].src =
+  "{% get_static_prefix %}corona/images/stock_reports/" + symbol+ "/{{ start }}/{{ delta }}.png";
+  event.stopPropagation();
+}
+
+function unhighlight(){
+ var table = document.getElementsByClassName("table table-bordered")[0];
+ for (var i=0;i < table.rows.length;i++){
+   var row = table.rows[i];
+   for(var j = 0; j < row.cells.length; j++){
+    row.cells[j].style.backgroundColor="transparent";
+   }
+ }
+ document.getElementById("stockpick").getElementsByTagName('img')[0].src = "";
+ }
+
+</script>
+</body>
+</html>
