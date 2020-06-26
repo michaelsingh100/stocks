@@ -7,4 +7,4 @@ class MeanPuller:
 
         enhan = (Statistics(symbol=result.symbol,mean_2020=result.mean,std_2020=result.stan) for result in results)
 
-        Statistics.bulk_create(enhan, ignore_conflicts=True)
+        Statistics.objects.bulk_create(enhan, ignore_conflicts=True)
