@@ -7,6 +7,7 @@ from ...pullers.zac_puller import ZacPuller
 from ...pullers.one_time_ticker_parser import  TickerUpdater
 import datetime
 import time
+from ...pullers.agg_mean import MeanPuller
 
 class Command(BaseCommand):
 
@@ -25,10 +26,14 @@ class Command(BaseCommand):
         #aggregator.aggregate()
         #
         # #Adds in growth info from morningstar
-        puller = MorningStarPuller()
-        puller.pull_growth()
+        # puller = MorningStarPuller()
+        # puller.pull_growth()
+        #
+        # #Pull from zac score
+        # zac_puller = ZacPuller()
+        # zac_puller.fetch_from_zac_and_update_earnings_to_db()
 
-        #Pull from zac score
-        zac_puller = ZacPuller()
-        zac_puller.fetch_from_zac_and_update_earnings_to_db()
+        #Agg mean and std
+        mean_puller = MeanPuller()
+        mean_puller.updatemean("2020-01-06")
         print(datetime.datetime.now() - a) 

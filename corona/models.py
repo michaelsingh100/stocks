@@ -57,3 +57,20 @@ class Growth(models.Model):
     y_2018 = models.FloatField(default=None, blank=True, null=True)
     y_2019 = models.FloatField(default=None, blank=True, null=True)
     y_2020 = models.FloatField(default=None, blank=True, null=True)
+
+class Statistics(models.Model):
+    class Meta:
+        db_table = 'Statistics'
+    symbol = models.CharField(max_length=10, primary_key=True)
+    mean_2015 = models.FloatField(default=None, blank=True, null=True)
+    std_2015 = models.FloatField(default=None, blank=True, null=True)
+    mean_2016 = models.FloatField(default=None, blank=True, null=True)
+    std_2016 = models.FloatField(default=None, blank=True, null=True)
+    mean_2017 = models.FloatField(default=None, blank=True, null=True)
+    std_2017 = models.FloatField(default=None, blank=True, null=True)
+    mean_2018 = models.FloatField(default=None, blank=True, null=True)
+    std_2019 = models.FloatField(default=None, blank=True, null=True)
+    mean_2019 = models.FloatField(default=None, blank=True, null=True)
+    std_2019 = models.FloatField(default=None, blank=True, null=True)
+    mean_2020 = models.FloatField(default=None, blank=True, null=True)
+    std_2020 = models.FloatField(default=None, blank=True, null=True)
