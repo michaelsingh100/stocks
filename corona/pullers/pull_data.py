@@ -21,15 +21,23 @@ class PullTickerData:
         Path(self.log_dir).mkdir(parents=True, exist_ok=True)
         threads = []
         for c in range(65, 91):
-            t = threading.Thread(target=self.pull_remaining_data, args=(char(c),))
-            threads.append(t)
-            t.start()
+            tickers = Tickers.objects.raw("select symbol from Tickers WHERE symbol REGEXP '^[%s]'" % (chr(c)))
+            # t = threading.Thread(target=self.pull_remaining_data, args=(char(c),))
+            # threads.append(t)
+            # t.start()
+            threads=[]
+            tickers = [tickers[i:i + n] for i in range(0, len(tickers), 4)]
+            for i in range (0,4):
+                t = threading.Thread(target=self.pull_remaining_data(), args=(tickers.pop(),chr(c),))
+                threads.append(t)
+                t.start()
 
-    def pull_remaining_data(self, letter):
+            for thrd in threads:
+                thrd.join()
+
+    def pull_remaining_data(self, lst,letter):
         data_to_fetch = list()
-        tickers = Tickers.objects.raw("select symbol from Tickers WHERE symbol REGEXP '^[%s]'" % (letter))
-
-        for ticker in tickers:
+        for ticker in lst:
             # last_date = ClosingPoints.objects.raw('select max(date) AS recent,max(id) AS id from ClosingPoints where symbol = "%s"' % (ticker))
             # if last_date and last_date[0].recent is not None:
             #     last_date = datetime.datetime.strptime(last_date[0].recent, "%Y-%m-%d")
