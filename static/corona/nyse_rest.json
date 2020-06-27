@@ -1,4 +1,4 @@
-[
+{ "stocks" :[
  {
    "Nasdaq Traded": "Y",
    "Symbol": "A",
@@ -124892,5 +124892,5 @@
    "CQS Symbol": "",
    "NASDAQ Symbol": "",
    "NextShares": ""
- }
-]
+}
+]}
