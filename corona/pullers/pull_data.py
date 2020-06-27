@@ -25,6 +25,8 @@ class PullTickerData:
             # t = threading.Thread(target=self.pull_remaining_data, args=(char(c),))
             # threads.append(t)
             # t.start()
+            with open("/home/ubuntu/logs/query.txt","a+") as fh:
+                fh.write("select symbol from Tickers WHERE symbol REGEXP '^[%s]'" % (chr(c)))
             threads=[]
             tickers = [tickers[i:i + 4] for i in range(0, len(tickers), 4)]
             for i in range (0,4):
@@ -60,16 +62,17 @@ class PullTickerData:
                                 start=start_date.strftime(self.default_time_format),
                                 data_source=self.default_source)
                 except RemoteDataError as exp:
-                    print("%s doesn't exist. remote error" % (ticker))
+                    fh.write(str(exp)) 
+                    fh.write("%s doesn't exist. remote error" % (ticker))
                     continue
                 closing = report['Adj Close']
                 close_enteries = (ClosingPoints(symbol=ticker, date=row[0], price=row[1]) for row in closing[ticker].iteritems())
                 ClosingPoints.objects.bulk_create(close_enteries, ignore_conflicts=True)
-                fh.write("Added Close for %s" % (ticker))
+                fh.write(" Added Close for %s" % (ticker))
 
                 volume = report['Volume']
                 vol_enteries = (VolumePoints(symbol=ticker, date=vol[0], volume=vol[1]) for vol in volume[ticker].iteritems())
                 VolumePoints.objects.bulk_create(vol_enteries, ignore_conflicts=True)
-                fh.write("Added Volume for %s" % (ticker))
-                fh.write("sleeping for .2 seconds")
+                fh.write(" Added Volume for %s" % (ticker))
+                fh.write(" sleeping for .2 seconds\n")
                 time.sleep(.5)
