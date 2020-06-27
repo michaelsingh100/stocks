@@ -18,12 +18,12 @@ class Command(BaseCommand):
         #ticker_updater.by_vol_and_earn()
 
         #Update tickers
-        ticker_updater = TickerUpdater()
-        ticker_updater.parse_tickers()
+        # ticker_updater = TickerUpdater()
+        # ticker_updater.parse_tickers()
         #
         # #Pull data from last finding to current day for all tickers in db
-        # data_updater = PullTickerData()
-        # data_updater.pull_remaining_data()
+        data_updater = PullTickerData()
+        data_updater.start_pulling()
 
         #Agregate the volumes
         #aggregator = AggVolume()
