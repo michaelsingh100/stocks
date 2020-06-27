@@ -26,7 +26,7 @@ class PullTickerData:
             # threads.append(t)
             # t.start()
             threads=[]
-            tickers = [tickers[i:i + n] for i in range(0, len(tickers), 4)]
+            tickers = [tickers[i:i + 4] for i in range(0, len(tickers), 4)]
             for i in range (0,4):
                 t = threading.Thread(target=self.pull_remaining_data(), args=(tickers.pop(),chr(c),))
                 threads.append(t)
