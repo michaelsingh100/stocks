@@ -22,8 +22,8 @@ class Command(BaseCommand):
         ticker_updater.parse_tickers()
         #
         # #Pull data from last finding to current day for all tickers in db
-        #data_updater = PullTickerData()
-        #data_updater.pull_remaining_data()
+        # data_updater = PullTickerData()
+        # data_updater.pull_remaining_data()
 
         #Agregate the volumes
         #aggregator = AggVolume()
@@ -40,4 +40,4 @@ class Command(BaseCommand):
         #Agg mean and std
         # mean_puller = MeanPuller()
         # mean_puller.updatemean("2020-01-06")
-        # print(datetime.datetime.now() - a)
+        print(datetime.datetime.now() - a) 
