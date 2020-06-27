@@ -28,7 +28,7 @@ class PullTickerData:
             threads=[]
             tickers = [tickers[i:i + 4] for i in range(0, len(tickers), 4)]
             for i in range (0,4):
-                t = threading.Thread(target=self.pull_remaining_data(), args=(tickers.pop(),chr(c),))
+                t = threading.Thread(target=self.pull_remaining_data, args=(tickers.pop(),chr(c)))
                 threads.append(t)
                 t.start()
 
@@ -50,7 +50,7 @@ class PullTickerData:
 
     def update_data_in_db(self, points, filename):
         # point[0] = ticker point[1] = start time
-        with open(self.log_dir + "/" + letter + ".txt","a+") as fh:
+        with open(self.log_dir + "/" + filename + ".txt","a+") as fh:
             for point in points:
                 ticker = point[0]
                 start_date = point[1]
