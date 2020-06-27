@@ -12,7 +12,7 @@ class Tickers(models.Model):
 class ClosingPoints(models.Model):
     class Meta:
         db_table = 'ClosingPoints'
-        unique_together = (('symbol', 'date'),)
+        unique_together = [['symbol', 'date']]
     id = models.AutoField(primary_key=True)
     symbol = models.CharField(max_length=10)
     date = models.DateTimeField(auto_now_add=False)

@@ -16,6 +16,10 @@ class Command(BaseCommand):
         # #get tickers by highest volume on day, and earnings =/- 5 days
         #ticker_updater = PullTickers()
         #ticker_updater.by_vol_and_earn()
+
+        #Update tickers
+        ticker_updater = TickerUpdater()
+        ticker_updater.parse_tickers()
         #
         # #Pull data from last finding to current day for all tickers in db
         #data_updater = PullTickerData()
@@ -34,6 +38,6 @@ class Command(BaseCommand):
         # zac_puller.fetch_from_zac_and_update_earnings_to_db()
 
         #Agg mean and std
-        mean_puller = MeanPuller()
-        mean_puller.updatemean("2020-01-06")
-        print(datetime.datetime.now() - a) 
+        # mean_puller = MeanPuller()
+        # mean_puller.updatemean("2020-01-06")
+        # print(datetime.datetime.now() - a)

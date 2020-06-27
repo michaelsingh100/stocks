@@ -25,3 +25,4 @@ class ZacPuller:
                     print("Recorded Info for %s" % (tick.symbol))
             except:
                 print("Failed on %s",tick.symbol)
+
