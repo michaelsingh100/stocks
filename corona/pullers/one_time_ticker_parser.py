@@ -3,7 +3,7 @@ from ..models import Tickers
 class TickerUpdater:
     # nasq_file = "/home/ubuntu/django_stock/stocks/corona/static/corona/nasdaq_json.json"
     # nysq_file = "/home/ubuntu/django_stock/stocks/corona/static/corona/nyse-listed_json.json"
-    nysq_file = "/home/ubuntu/django_stock/stocks/corona/static/corona/nyse-rest.json"
+    nysq_file = "/home/ubuntu/django_stock/stocks/corona/static/corona/nyse_rest.json"
 
     def parse_tickers(self):
         # nasq = []

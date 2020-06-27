@@ -5,7 +5,7 @@ import datetime
 from pandas_datareader import data
 import pandas as pd
 from pandas_datareader._utils import RemoteDataError
-
+import time
 
 class PullTickerData:
     default_start = datetime.datetime(2016, 1, 4)
@@ -50,4 +50,5 @@ class PullTickerData:
             vol_enteries = (VolumePoints(symbol=ticker, date=vol[0], volume=vol[1]) for vol in volume[ticker].iteritems())
             VolumePoints.objects.bulk_create(vol_enteries, ignore_conflicts=True)
             print("Added Volume for %s" % (ticker))
-
+            print("sleeping for .2 seconds")
+            time.sleep(.2)
