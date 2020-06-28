@@ -1,5 +1,5 @@
 from ..models import Tickers
-from ..utils import get_chunks
+from ..utils.utils import get_chunks
 import threading
 from pandas_datareader import data
 import datetime
