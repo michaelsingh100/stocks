@@ -8,6 +8,7 @@ from pandas_datareader._utils import RemoteDataError
 import time
 import threading
 from pathlib import Path
+from django.db import connection
 
 class PullTickerData:
     default_start = datetime.datetime(2016, 1, 4)
@@ -26,9 +27,10 @@ class PullTickerData:
             # t.start()
             with open(self.log_dir + "/" + "broken.txt", "a+") as fh:
                 for tick in tickers:
-                    ClosingPoints.objects.raw("delete from ClosingPoints where symbol = '%s'" % tick.symbol)
-                    VolumePoints.objects.raw("delete from VolumePoints where symbol = '%s'" % tick.symbol)
-                    fh.write("%s with count %s" % (tick.symbol,tick.tc))
+                    with connection.cursor() as cursor:
+                        cursor.execute("delete from ClosingPoints where symbol = '%s'" % tick.symbol)
+                        cursor.execute("delete from VolumePoints where symbol = '%s'" % tick.symbol)
+                    fh.write("%s with count %s \n" % (tick.symbol,tick.tc))
 
             threads=[]
             step = int(len(tickers)/5) + 1
@@ -98,7 +100,7 @@ class PullTickerData:
                 closing = report['Adj Close']
                 close_enteries = (ClosingPoints(symbol=ticker, date=row[0], price=row[1]) for row in closing[ticker].iteritems())
                 ClosingPoints.objects.bulk_create(close_enteries, ignore_conflicts=True)
-                fh.write(" Added Close for %s" % (ticker))
+                fh.write(" Added Close for %s amount: %s \n" % (ticker,len(close_enteries)))
 
                 volume = report['Volume']
                 vol_enteries = (VolumePoints(symbol=ticker, date=vol[0], volume=vol[1]) for vol in volume[ticker].iteritems())
