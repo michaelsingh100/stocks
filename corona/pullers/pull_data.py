@@ -28,8 +28,10 @@ class PullTickerData:
             with open("/home/ubuntu/logs/query.txt","a+") as fh:
                 fh.write("select symbol from Tickers WHERE symbol REGEXP '^[%s]'" % (chr(c)))
             threads=[]
-            tickers = [tickers[i:i + 4] for i in range(0, len(tickers), 4)]
-            for i in range (0,4):
+            step = int(len(tickers)/5) + 1
+            count = len(tickers)
+            tickers = [tickers[i:i + step] for i in range(0, count, step)]
+            for i in range (0,5):
                 t = threading.Thread(target=self.pull_remaining_data, args=(tickers.pop(),chr(c)))
                 threads.append(t)
                 t.start()
