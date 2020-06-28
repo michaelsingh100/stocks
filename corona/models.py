@@ -7,6 +7,7 @@ class Tickers(models.Model):
         db_table = 'Tickers'
     symbol = models.CharField(max_length=10, primary_key=True)
     name = models.CharField(max_length=100)
+    supported = models.BooleanField(default=True)
 
 
 class ClosingPoints(models.Model):

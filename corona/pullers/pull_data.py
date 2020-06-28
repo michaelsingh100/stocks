@@ -19,7 +19,6 @@ class PullTickerData:
 
     def fix_data(self):
         Path(self.log_dir).mkdir(parents=True, exist_ok=True)
-        threads = []
         for c in range(65, 91):
             tickers = Tickers.objects.raw("select symbol,count(*) as tc from ClosingPoints WHERE symbol REGEXP '^[%s]' group by symbol having tc < 1129" % (chr(c)))
             # t = threading.Thread(target=self.pull_remaining_data, args=(char(c),))
@@ -60,7 +59,7 @@ class PullTickerData:
             step = int(len(tickers)/5) + 1
             count = len(tickers)
             tickers = [tickers[i:i + step] for i in range(0, count, step)]
-            for i in range (0,5):
+            for i in range (0,len(tickers)):
                 t = threading.Thread(target=self.pull_remaining_data, args=(tickers.pop(),chr(c)))
                 threads.append(t)
                 t.start()
