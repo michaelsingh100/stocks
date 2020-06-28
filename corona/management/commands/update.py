@@ -23,7 +23,8 @@ class Command(BaseCommand):
         #
         # #Pull data from last finding to current day for all tickers in db
         data_updater = PullTickerData()
-        data_updater.start_pulling()
+        #data_updater.start_pulling()
+        data_updater.fix_data()
 
         #Agregate the volumes
         #aggregator = AggVolume()

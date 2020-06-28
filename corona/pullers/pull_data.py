@@ -16,6 +16,31 @@ class PullTickerData:
     default_source = 'yahoo'
     log_dir = "/home/ubuntu/logs"
 
+    def fix_data(self):
+        Path(self.log_dir).mkdir(parents=True, exist_ok=True)
+        threads = []
+        for c in range(65, 91):
+            tickers = Tickers.objects.raw("select symbol,count(*) as tc from ClosingPoints WHERE symbol REGEXP '^[%s]' group by symbol having tc < 1129" % (chr(c)))
+            # t = threading.Thread(target=self.pull_remaining_data, args=(char(c),))
+            # threads.append(t)
+            # t.start()
+            with open(self.log_dir + "/" + "broken.txt", "a+") as fh:
+                for tick in tickers:
+                    ClosingPoints.objects.raw("delete from ClosingPoints where symbol = '%s'" % tick.symbol)
+                    VolumePoints.objects.raw("delete from VolumePoints where symbol = '%s'" % tick.symbol)
+                    fh.write("%s with count %s" % (tick.symbol,tick.tc))
+
+            threads=[]
+            step = int(len(tickers)/5) + 1
+            count = len(tickers)
+            tickers = [tickers[i:i + step] for i in range(0, count, step)]
+            for i in range (0,5):
+                t = threading.Thread(target=self.pull_remaining_data, args=(tickers.pop(),chr(c),True))
+                threads.append(t)
+                t.start()
+
+            for thrd in threads:
+                thrd.join()
 
     def start_pulling(self):
         Path(self.log_dir).mkdir(parents=True, exist_ok=True)
@@ -39,7 +64,7 @@ class PullTickerData:
             for thrd in threads:
                 thrd.join()
 
-    def pull_remaining_data(self, lst,letter):
+    def pull_remaining_data(self, lst,letter,broken=False):
         data_to_fetch = list()
         for ticker in lst:
             # last_date = ClosingPoints.objects.raw('select max(date) AS recent,max(id) AS id from ClosingPoints where symbol = "%s"' % (ticker))
@@ -50,7 +75,10 @@ class PullTickerData:
             # else:
             data_to_fetch.append((ticker.symbol, PullTickerData.default_start))
         if len(data_to_fetch) > 0 :
-            self.update_data_in_db(data_to_fetch,letter)
+            if not broken:
+                self.update_data_in_db(data_to_fetch,letter)
+            else:
+                self.update_data_in_db(data_to_fetch,"broken")
 
     def update_data_in_db(self, points, filename):
         # point[0] = ticker point[1] = start time
