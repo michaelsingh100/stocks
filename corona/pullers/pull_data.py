@@ -38,7 +38,7 @@ class PullTickerData:
             step = int(len(tickers)/5) + 1
             count = len(tickers)
             tickers = [tickers[i:i + step] for i in range(0, count, step)]
-            for i in range (0,5):
+            for i in range (0,len(tickers)):
                 t = threading.Thread(target=self.pull_remaining_data, args=(tickers.pop(),chr(c),True))
                 threads.append(t)
                 t.start()
@@ -102,7 +102,7 @@ class PullTickerData:
                 closing = report['Adj Close']
                 close_enteries = (ClosingPoints(symbol=ticker, date=row[0], price=row[1]) for row in closing[ticker].iteritems())
                 ClosingPoints.objects.bulk_create(close_enteries, ignore_conflicts=True)
-                fh.write(" Added Close for %s amount: %s \n" % (ticker,len(close_enteries)))
+                fh.write(" Added Close for %s amount: %s \n" % (ticker,len(closing[ticker])))
 
                 volume = report['Volume']
                 vol_enteries = (VolumePoints(symbol=ticker, date=vol[0], volume=vol[1]) for vol in volume[ticker].iteritems())
