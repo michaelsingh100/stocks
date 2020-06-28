@@ -29,6 +29,7 @@ class PullTickerData:
                 for tick in tickers:
                     with connection.cursor() as cursor:
                         cursor.execute("delete from ClosingPoints where symbol = '%s'" % tick.symbol)
+                    with connection.cursor() as cursor:
                         cursor.execute("delete from VolumePoints where symbol = '%s'" % tick.symbol)
                     fh.write("%s with count %s \n" % (tick.symbol,tick.tc))
 
