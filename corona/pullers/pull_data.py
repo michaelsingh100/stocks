@@ -25,14 +25,15 @@ class PullTickerData:
             # t = threading.Thread(target=self.pull_remaining_data, args=(char(c),))
             # threads.append(t)
             # t.start()
+            print("I made it here")
             with open(self.log_dir + "/" + "broken.txt", "a+") as fh:
                 for tick in tickers:
                     with connection.cursor() as cursor:
-                        cursor.execute("delete from ClosingPoints where symbol = '%s'" % tick.symbol)
+                        cursor.execute("delete from stock.ClosingPoints where symbol = '%s'" % tick.symbol)
                     with connection.cursor() as cursor:
-                        cursor.execute("delete from VolumePoints where symbol = '%s'" % tick.symbol)
+                        cursor.execute("delete from stock.VolumePoints where symbol = '%s'" % tick.symbol)
                     fh.write("%s with count %s \n" % (tick.symbol,tick.tc))
-
+                    print("Also here")
             threads=[]
             step = int(len(tickers)/5) + 1
             count = len(tickers)
