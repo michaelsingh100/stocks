@@ -27,27 +27,28 @@ class SupportChecker:
 
     def update_supported(self,lst):
         #Check yahoo reader support
-        try:
-            report = data.get_data_yahoo(lst,start=datetime.datetime.now() - datetime.timedelta(days=3))['Adj Close']
-            for symbol in lst:
-                if math.isnan(report[symbol][0]):
+        for symbol in lst:
+            try:
+                report = data.get_data_yahoo(symbol,start=datetime.datetime.now() - datetime.timedelta(days=3))['Adj Close']
+                for symbol in lst:
+                    if math.isnan(report[0]):
+                        t = Tickers.objects.get(symbol=symbol)
+                        t.supported = False
+                        t.save(['supported'])
+                        print("I DID SOMETHING")
+                    else:
+                        t = Tickers.objects.get(symbol=symbol)
+                        t.supported = True
+                        t.save(['supported'])
+            except:
+                for symbol in lst:
                     t = Tickers.objects.get(symbol=symbol)
                     t.supported = False
                     t.save(['supported'])
-                    print("I DID SOMETHING") 
-                else:
-                    t = Tickers.objects.get(symbol=symbol)
-                    t.supported = True
-                    t.save(['supported'])
-        except:
-            for symbol in lst:
-                t = Tickers.objects.get(symbol=symbol)
-                t.supported = False
-                t.save(['supported'])
 
-        #Check robhin hood support
-        r.login("michaelsingh100@gmail.com","Hiall234@@")
-        for symbol in lst:
+            #Check robhin hood support
+            r.login("michaelsingh100@gmail.com","Hiall234@@")
+
             if r.get_stock_quote_by_symbol(symbol) is None:
                 t = Tickers.objects.get(symbol=symbol)
                 t.supported = False
