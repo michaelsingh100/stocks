@@ -34,8 +34,6 @@ class SupportChecker:
                 continue
 
             #Check robhin hood support
-            r.login("michaelsingh100@gmail.com","Hiall234@@")
-
             if r.get_stock_quote_by_symbol(symbol) is None:
                 Tickers.objects.update_or_create(symbol=symbol,defaults={"supported" : False})
                 print("Successfully rejected unsupported %s" % symbol)
