@@ -15,8 +15,10 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         a = datetime.datetime.now()
         #Check new supports
-        support = SupportChecker()
-        support.update_support()
+        # support = SupportChecker()
+        # support.update_support()
+
+
         # #get tickers by highest volume on day, and earnings =/- 5 days
         #ticker_updater = PullTickers()
         #ticker_updater.by_vol_and_earn()
@@ -26,9 +28,9 @@ class Command(BaseCommand):
         # ticker_updater.parse_tickers()
         #
         # #Pull data from last finding to current day for all tickers in db
-        # data_updater = PullTickerData()
-        # #data_updater.start_pulling()
-        # data_updater.fix_data()
+        data_updater = PullTickerData()
+        #data_updater.start_pulling()
+        data_updater.fix_data()
 
         #Agregate the volumes
         #aggregator = AggVolume()

@@ -9,6 +9,7 @@ import time
 import threading
 from pathlib import Path
 from django.db import connection
+from ..utils.utils import get_chunks
 
 class PullTickerData:
     default_start = datetime.datetime(2016, 1, 4)
@@ -28,16 +29,14 @@ class PullTickerData:
             with open(self.log_dir + "/" + "broken.txt", "a+") as fh:
                 for tick in tickers:
                     with connection.cursor() as cursor:
-                        cursor.execute("delete from stock.ClosingPoints where symbol = '%s'" % tick.symbol)
+                        cursor.execute("delete from ClosingPoints where symbol = '%s'" % tick.symbol)
                     with connection.cursor() as cursor:
-                        cursor.execute("delete from stock.VolumePoints where symbol = '%s'" % tick.symbol)
+                        cursor.execute("delete from VolumePoints where symbol = '%s'" % tick.symbol)
                     fh.write("%s with count %s \n" % (tick.symbol,tick.tc))
                     print("Also here")
             threads=[]
-            step = int(len(tickers)/5) + 1
-            count = len(tickers)
-            tickers = [tickers[i:i + step] for i in range(0, count, step)]
-            for i in range (0,len(tickers)):
+            tickers = get_chunks(tickers,5)
+            for i in range (0,5):
                 t = threading.Thread(target=self.pull_remaining_data, args=(tickers.pop(),chr(c),True))
                 threads.append(t)
                 t.start()
@@ -91,9 +90,7 @@ class PullTickerData:
                 start_date = point[1]
                 fh.write("Pulling %s data" % (ticker))
                 try:
-                    report = data.DataReader([ticker],
-                                start=start_date.strftime(self.default_time_format),
-                                data_source=self.default_source)
+                    report = data.get_data_yahoo([symbol],start=start_date.strftime(self.default_time_format))
                 except RemoteDataError as exp:
                     fh.write(str(exp)) 
                     fh.write("%s doesn't exist. remote error" % (ticker))
