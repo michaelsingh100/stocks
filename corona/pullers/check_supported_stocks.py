@@ -15,7 +15,6 @@ class SupportChecker:
             tickers = Tickers.objects.raw("select symbol from Tickers WHERE symbol REGEXP '^[%s]'" % (chr(c)))
             tickers = [str(tick.symbol) for tick in tickers]
             threads = []
-            print(type(tickers)) 
             tickers = get_chunks(tickers,5)
             for i in range (0,5):
                 t = threading.Thread(target=self.update_supported, args=([tickers.pop()]))
@@ -39,6 +38,8 @@ class SupportChecker:
 
             if r.get_stock_quote_by_symbol(symbol) is None:
                 Tickers.objects.update_or_create(symbol=symbol,defaults={"supported" : False})
+                print("Successfully rejected unsupported %s" % symbol)
             else:
                 Tickers.objects.update_or_create(symbol=symbol,defaults={"supported" : True})
+                print("Successfuly added supported %s" % symbol)
 
