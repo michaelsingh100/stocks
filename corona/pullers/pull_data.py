@@ -90,7 +90,7 @@ class PullTickerData:
                 start_date = point[1]
                 fh.write("Pulling %s data" % (ticker))
                 try:
-                    report = data.get_data_yahoo([symbol],start=start_date.strftime(self.default_time_format))
+                    report = data.get_data_yahoo([ticker],start=start_date.strftime(self.default_time_format))
                 except RemoteDataError as exp:
                     fh.write(str(exp)) 
                     fh.write("%s doesn't exist. remote error" % (ticker))
