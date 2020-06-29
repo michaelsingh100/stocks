@@ -13,11 +13,12 @@ class SupportChecker:
     def update_support(self):
         for c in range(65, 91):
             tickers = Tickers.objects.raw("select symbol from Tickers WHERE symbol REGEXP '^[%s]'" % (chr(c)))
-            tickers = (tick.symbol for tick in tickers)
+            tickers = [str(tick.symbol) for tick in tickers]
             threads = []
+            print(type(tickers)) 
             tickers = get_chunks(tickers,5)
             for i in range (0,5):
-                t = threading.Thread(target=self.update_supported, args=(tickers.pop(),chr(c)))
+                t = threading.Thread(target=self.update_supported, args=([tickers.pop()]))
                 threads.append(t)
                 t.start()
 
@@ -29,10 +30,11 @@ class SupportChecker:
         try:
             report = data.get_data_yahoo(lst,start=datetime.datetime.now() - datetime.timedelta(days=3))['Adj Close']
             for symbol in lst:
-                if math.isnan(report['Adj Close'][symbol][0]):
+                if math.isnan(report[symbol][0]):
                     t = Tickers.objects.get(symbol=symbol)
                     t.supported = False
                     t.save(['supported'])
+                    print("I DID SOMETHING") 
                 else:
                     t = Tickers.objects.get(symbol=symbol)
                     t.supported = True
