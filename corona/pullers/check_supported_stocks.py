@@ -30,31 +30,15 @@ class SupportChecker:
         for symbol in lst:
             try:
                 report = data.get_data_yahoo(symbol,start=datetime.datetime.now() - datetime.timedelta(days=3))['Adj Close']
-                for symbol in lst:
-                    if math.isnan(report[0]):
-                        t = Tickers.objects.get(symbol=symbol)
-                        t.supported = False
-                        t.save(['supported'])
-                        print("I DID SOMETHING")
-                    else:
-                        t = Tickers.objects.get(symbol=symbol)
-                        t.supported = True
-                        t.save(['supported'])
             except:
-                for symbol in lst:
-                    t = Tickers.objects.get(symbol=symbol)
-                    t.supported = False
-                    t.save(['supported'])
+                Tickers.objects.update_or_create(symbol=symbol,defaults={"supported" : False})
+                continue
 
             #Check robhin hood support
             r.login("michaelsingh100@gmail.com","Hiall234@@")
 
             if r.get_stock_quote_by_symbol(symbol) is None:
-                t = Tickers.objects.get(symbol=symbol)
-                t.supported = False
-                t.save(['supported'])
+                Tickers.objects.update_or_create(symbol=symbol,defaults={"supported" : False})
             else:
-                t = Tickers.objects.get(symbol=symbol)
-                t.supported = True
-                t.save(['supported'])
+                Tickers.objects.update_or_create(symbol=symbol,defaults={"supported" : True})
 
